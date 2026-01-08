@@ -8,7 +8,7 @@ export default function AboutSection() {
             <div className="text-items">
               <p>
                 Zestarkは、課題を整理し、最適な形でシステムに落とし込む
-                "設計力"を強みとする技術チームです。
+                「設計力」を強みとする技術チームです。
               </p>
               <p>
                 技術と創造性を掛け合わせ、持続可能で価値ある仕組みづくりを通じて、

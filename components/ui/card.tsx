@@ -6,7 +6,13 @@ type ServiceCardProps = {
   onClick: () => void;
 };
 
-export default function ServiceCard({ icon, title, text, button, onClick }) {
+export default function ServiceCard({
+  icon,
+  title,
+  text,
+  button,
+  onClick,
+}: ServiceCardProps) {
   return (
     <div className="service-card">
       <div className="service-icon">
