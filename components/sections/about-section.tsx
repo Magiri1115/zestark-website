@@ -1,25 +1,30 @@
+import Image from "next/image";
+
 export default function AboutSection() {
   return (
     <section id="about-section">
       <div className="about-container flex gap-8">
         <div className="about-items">
           <h2>ABOUT US</h2>
-          <div>
+          <div className="about-description">
             <div className="text-items">
+              <div className="image-wrapper">
+                <Image
+                  src="/images/zestark-feature.jpg"
+                  alt="Zestarkの設計思想を表すイメージ"
+                  width={450}
+                  height={250}
+                  className="rounded-lg opacity-70"
+                />
+              </div>
               <p>
-                Zestarkは、目の前にある課題をそのままシステム化するのではなく、
-                業務・目的・制約を整理し、構造として捉え直したうえで、最適な形に
-                再設計する「設計力」を強みとする技術チームです。
-                私たちは、技術そのものを目的にするのではなく、
-                「なぜその仕組みが必要なのか」「どこまで作るべきか」
-                「将来どのように変化するのか」といった本質的な問いに向き合いながら、
-                保守性・拡張性・運用現実性を踏まえたシステム設計を行います。
+                Zestarkは「設計力」を強みとする技術チームです。
               </p>
             </div>
           </div>
         </div>
 
-        <div className="about-features flex flex-col gap-4">
+        <div className="about-features gap-4">
           <div className="about-introduce-container flex items-start">
             <div className="about-icon">
               <img src="/icons/approach.svg" alt="革新的なアプローチ" />
