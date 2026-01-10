@@ -3,7 +3,7 @@ export default function ContactSection() {
     <section id="contact-section">
       <div className="contact-container">
         <h2>CONTACT</h2>
-        <p>お気軽にお問い合わせください。</p>
+        <p>DMにてお気軽にお問い合わせください。</p>
         <p>3営業日以内に返信いたします。</p>
       </div>
 
