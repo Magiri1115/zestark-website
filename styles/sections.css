@@ -251,14 +251,20 @@ main {
 /* ================================
    CONTACT
 ================================ */
-.contact-container, .contact-content {
+.contact-container {
+  margin: 3rem 0;
   text-align: center;
 }
 
 .contact-content {
   display: flex;
   flex-direction: column;
+  text-align: center;
   gap: 1rem;
+}
+
+.contact-info {
+  margin: 2rem 0;
 }
 
 .contact-icon img {

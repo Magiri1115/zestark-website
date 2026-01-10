@@ -5,8 +5,10 @@ export default function ContactSection() {
     <section id="contact-section">
       <div className="contact-container">
         <h2>CONTACT</h2>
-        <p>DMにてお気軽にお問い合わせください。</p>
+        <div className="contact-info">
+        <p>下記SNSのDMにてお気軽にお問い合わせください。</p>
         <p>3営業日以内に返信いたします。</p>
+        </div>
       </div>
 
       <div className="contact-content">
