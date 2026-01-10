@@ -1,4 +1,4 @@
-import ServiceCard from '../ui/card';
+import ServiceCard from '../ui/services-card';
 
 type ServicesSectionProps = {
   onChangeSection: (section: string) => void;

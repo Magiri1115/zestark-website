@@ -26,7 +26,7 @@ export default function AboutSection() {
 
         <div className="about-features">
           <div className="about-introduce-container flex items-start">
-            <div className="about-icon">
+            <div className="interactive-icon">
               <img src="/icons/approach.svg" alt="革新的なアプローチ" />
             </div>
             <div>
@@ -36,7 +36,7 @@ export default function AboutSection() {
           </div>
 
           <div className="about-introduce-container flex items-start">
-            <div className="about-icon">
+            <div className="interactive-icon">
               <img src="/icons/community.svg" alt="コミュニティ重視" />
             </div>
             <div>
@@ -46,7 +46,7 @@ export default function AboutSection() {
           </div>
 
           <div className="about-introduce-container flex items-start">
-            <div className="about-icon">  
+            <div className="interactive-icon">
               <img src="/icons/growth.svg" alt="持続的成長" />
             </div>
             <div>

@@ -1,29 +1,34 @@
 /* ================================
-   Main Layout
+   Main Layout・変数
 ================================ */
 main {
   position: relative;
   z-index: 1;
 }
 
+root {
+  --svg-icon-border: transparent;
+}
+
 /* -----------------------------------------
    全体レスポンシブ
 ----------------------------------------- */
 /* --- PC --- */
-@media (min-width: 960px) {
+@media (min-width: 961px) {
   .main-contents {
     width: 20%;
   }
 }
 
-/* --- Tablet --- */
+/* -----------------------------------------
+   タブレット・モバイルレスポンシブ（改良中）
 @media (min-width: 768px) and (max-width: 960px) {
   .main-contents {
     width: 35%;
   }
 }
 
-/* --- Mobile --- */
+
 @media (max-width: 767px) {
   .main-contents {
     width: 100%;
@@ -31,7 +36,7 @@ main {
     justify-content: center;
   }
 }
-
+----------------------------------------- */
 /* ================================
    Body
 ================================ */
@@ -134,7 +139,7 @@ main {
   text-align: center;
 }
 
-.service-card {
+.services-card {
   background-color: rgba(18, 22, 36, 0.9);
   border: 1px solid rgba(255, 255, 255, 0.07);
   border-radius: 20px;
@@ -146,25 +151,12 @@ main {
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.service-card:hover {
+.services-card:hover {
   border-color: rgba(100, 140, 255, 0.4);
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
 }
 
-.service-icon {
-  border-radius: 20px;
-  padding: 8px;
-  background-color: var(--card-background);
-}
-
-.service-icon img {
-  width: 44px;
-  height: 44px;
-  color: var(--color-gold);
-  filter: drop-shadow(0 0 6px var(--color-gold-shadow));
-}
-
-.service-card h3 {
+.services-card h3 {
   font-size: 20px;
   font-weight: 600;
   text-align: center;
@@ -172,14 +164,14 @@ main {
   margin-bottom: 14px;
 }
 
-.service-card p {
+.services-card p {
   font-size: 14px;
   line-height: 1.8;
   text-align: center;
   color: #cfd6ff;
 }
 
-.service-card button {
+.services-card button {
   margin-top: auto;
 }
 
@@ -206,22 +198,10 @@ main {
   text-align: center;
 }
 
-.about-icon img {
-  width: 44px;
-  height: 44px;
-  color: var(--color-gold);
-  filter: drop-shadow(0 0 6px var(--color-gold-shadow));
-}
 
 .about-introduce-container {
     align-items: center;
     gap: 24px;
-}
-
-.about-icon {
-  border-radius: 20px;
-  padding: 8px;
-  background-color: var(--card-background);
 }
 
 .about-features {
