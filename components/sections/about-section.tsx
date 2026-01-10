@@ -10,7 +10,7 @@ export default function AboutSection() {
             <div className="text-items">
               <div className="image-wrapper">
                 <Image
-                  src="/images/zestark-feature.jpg"
+                  src="/images/zestark-feature.png"
                   alt="Zestarkの設計思想を表すイメージ"
                   width={450}
                   height={250}
@@ -24,7 +24,7 @@ export default function AboutSection() {
           </div>
         </div>
 
-        <div className="about-features gap-4">
+        <div className="about-features">
           <div className="about-introduce-container flex items-start">
             <div className="about-icon">
               <img src="/icons/approach.svg" alt="革新的なアプローチ" />

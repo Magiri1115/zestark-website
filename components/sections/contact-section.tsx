@@ -1,3 +1,5 @@
+import SnsIconList from "@/components/ui/sns-icon-list";
+
 export default function ContactSection() {
   return (
     <section id="contact-section">
@@ -8,20 +10,7 @@ export default function ContactSection() {
       </div>
 
       <div className="contact-content">
-
-        {/* --- SNSアイコンエリア --- */}
-        <div className="contact-sns-area">
-          <div className="contact-icon">
-            <img src="/icons/discord.svg" alt="Discord" />
-          </div>
-          <div className="contact-icon">
-            <img src="/icons/twitter.svg" alt="Twitter" />
-          </div>
-          <div className="contact-icon">
-            <img src="/icons/github.svg" alt="GitHub" />
-          </div>
-        </div>
-
+        <SnsIconList />
       </div>
     </section>
   );

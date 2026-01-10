@@ -1,7 +1,6 @@
 /* ================================
    Main Layout
 ================================ */
-
 main {
   position: relative;
   z-index: 1;
@@ -10,7 +9,6 @@ main {
 /* -----------------------------------------
    全体レスポンシブ
 ----------------------------------------- */
-
 /* --- PC --- */
 @media (min-width: 960px) {
   .main-contents {
@@ -37,7 +35,6 @@ main {
 /* ================================
    Body
 ================================ */
-
 .body-contents {
   position: fixed;
   top: 50%;
@@ -55,7 +52,6 @@ main {
 /* ================================
    Banner
 ================================ */
-
 .home-banners {
   padding: 32px;
   height: 100%;
@@ -74,7 +70,6 @@ main {
 /* ================================
    Logo
 ================================ */
-
 .logo-area {
   position: fixed;
   bottom: 80px;
@@ -86,7 +81,6 @@ main {
 /* ================================
    Navigation
 ================================ */
-
 .navi-frame {
   height: 100%;
   display: flex;
@@ -102,26 +96,6 @@ main {
   transition: color .3s;
 }
 
-/* Tablet */
-@media (min-width: 768px) and (max-width: 960px) {
-  .nav-contents {
-    font-size: 24px;
-    line-height: 32px;
-  }
-}
-
-/* Mobile */
-@media (max-width: 767px) {
-  .navi-frame {
-    gap: 16px;
-    justify-content: flex-end;
-  }
-  .nav-contents {
-    font-size: 16px;
-    line-height: 24px;
-  }
-}
-
 .nav-contents:hover {
   color: #60a5fa;
 }
@@ -129,7 +103,6 @@ main {
 /* ================================
    Footer
 ================================ */
-
 .footer {
   text-align: center;
   width: 100%;
@@ -139,22 +112,6 @@ main {
   bottom: 0;
   left: 0;
   z-index: 5;
-}
-
-/* Tablet */
-@media (min-width: 768px) and (max-width: 960px) {
-  .footer {
-    font-size: 16px;
-    line-height: 32px;
-  }
-}
-
-/* Mobile */
-@media (max-width: 767px) {
-  .footer {
-    font-size: 12px;
-    line-height: 24px;
-  }
 }
 
 /* ================================
@@ -238,7 +195,7 @@ main {
   justify-content: center;
 }
 .about-items {
-  width: 60%;
+  width: 50%;
 }
 
 .about-items h2 {
@@ -275,11 +232,12 @@ main {
   transition: border-color .3s, box-shadow .3s;
   display: flex;
   padding: 16px 24px;
+  gap: 12px;
 }
+
 /* ================================
    BLOG
 ================================ */
-
 .blog-content {
   text-align: center;
 }
@@ -288,30 +246,6 @@ main {
   display: flex;
   justify-content: center;
   gap: 24px;
-}
-
-.blog-card {
-  display: block;
-  padding: 1.5rem;
-  border: 1px solid var(--border-color);
-  border-radius: 8px;
-  text-decoration: none;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.blog-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
-}
-
-.blog-card--disabled {
-  pointer-events: none;
-  opacity: 0.4;
-  border-color: rgba(255, 255, 255, 0.08);
-}
-
-.blog-card--disabled span {
-  opacity: 0.6;
 }
 
 /* ================================
@@ -345,7 +279,7 @@ main {
 
 .contact-sns-area {
   display: flex;
-  gap: 1rem;
+  gap: 3rem;
   align-items: center;
   justify-content: center
 }
