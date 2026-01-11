@@ -5,6 +5,7 @@ import "../styles/sections.css";
 import "../styles/variables.css";
 import "../styles/blog-card.css";
 import "../styles/sns-icon.css";
+import "../styles/services-card.css";
 import "../styles/interactive-icon.css";
 import "../styles/navbar.css";
 import "../styles/footer.css";

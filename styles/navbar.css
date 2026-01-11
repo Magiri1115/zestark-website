@@ -30,3 +30,113 @@
 .navbar-divst a:hover {
   opacity: 0.7;
 }
+
+/* ==============================
+   Indicator Line
+================================ */
+.nav-indicator-line {
+  position: relative;
+  width: 2px;
+  height: 40px;
+  margin-right: 24px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.indicator-dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: white;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s ease;
+}
+
+/* ==============================
+   Nav Item
+================================ */
+.nav-item {
+  position: relative;
+}
+
+/* hoverした項目がある時、点が灯る */
+.navbar-divst:hover + .nav-indicator-line .indicator-dot {
+  opacity: 1;
+}
+
+/* ==============================
+   Nav Link
+================================ */
+.nav-link {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+/* ==============================
+   Orbital Line
+================================ */
+.orbital-line {
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 8px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 0 0 60% 60%;
+
+  opacity: 0;
+  transform: scaleX(0.85);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.nav-link:hover .orbital-line {
+  opacity: 0.5;
+  transform: scaleX(1);
+}
+
+/* ==============================
+   Blink Animation
+================================ */
+@keyframes gentle-blink {
+  0% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 0.25;
+  }
+}
+
+/* ==============================
+   Active Section（点灯）
+================================ */
+.nav-item.is-active .orbital-line {
+  opacity: 0.55;
+  transform: scaleX(1);
+  animation: none;
+}
+
+/* ==============================
+   Hover on Inactive Section（点滅）
+================================ */
+.nav-item:not(.is-active):hover .orbital-line {
+  opacity: 0.4;
+  transform: scaleX(1);
+  animation: gentle-blink 2.2s ease-in-out infinite;
+}
