@@ -11,9 +11,9 @@ export default function HomeSection({ onChangeSection }: HomeSectionProps) {
             <h1>
               青き先駆・黒き革新
             </h1>
-            <p className="button-container text-xl text-gray-400 mb-12 leading-relaxed max-w-3xl mx-auto">
-              現実の課題を構造として捉え、それをシステムへと正確に落とし込む設計力を軸に、
-              技術支援・教育・コンテンツ発信を通じて、未来のクリエイターとともに新しい価値を創造します。
+            <p className="text-xl text-gray-400 mb-12 leading-relaxed max-w-3xl mx-auto">
+              現実の課題を構造的に捉える設計力を軸に、技術支援・教育・発信を通じて<br />
+              未来のクリエイターと新たな価値を創造します。
             </p>
 
             <div className="button-container flex items-center justify-center gap-6">
@@ -25,10 +25,11 @@ export default function HomeSection({ onChangeSection }: HomeSectionProps) {
               </button>
 
               <button
-                className="home-button secondary"
+                className="action-button"
                 onClick={() => onChangeSection('contact')}
               >
                 話を聞く
+                <span className="animate-shimmer" />
               </button>
             </div>
 
