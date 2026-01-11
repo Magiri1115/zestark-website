@@ -1,26 +1,32 @@
+import Image from "next/image";
+
 export default function AboutSection() {
   return (
     <section id="about-section">
       <div className="about-container flex gap-8">
         <div className="about-items">
           <h2>ABOUT US</h2>
-          <div>
+          <div className="about-description">
             <div className="text-items">
+              <div className="image-wrapper">
+                <Image
+                  src="/images/zestark-feature.png"
+                  alt="Zestarkの設計思想を表すイメージ"
+                  width={450}
+                  height={250}
+                  className="rounded-lg opacity-70"
+                />
+              </div>
               <p>
-                Zestarkは、課題を整理し、最適な形でシステムに落とし込む
-                「設計力」を強みとする技術チームです。
-              </p>
-              <p>
-                技術と創造性を掛け合わせ、持続可能で価値ある仕組みづくりを通じて、
-                お客様とともに未来を形にしていくことが私たちの使命です。
+                Zestarkは「設計力」を強みとする技術チームです。
               </p>
             </div>
           </div>
         </div>
 
-        <div className="about-features flex flex-col gap-4">
+        <div className="about-features">
           <div className="about-introduce-container flex items-start">
-            <div className="about-icon">
+            <div className="interactive-icon">
               <img src="/icons/approach.svg" alt="革新的なアプローチ" />
             </div>
             <div>
@@ -30,7 +36,7 @@ export default function AboutSection() {
           </div>
 
           <div className="about-introduce-container flex items-start">
-            <div className="about-icon">
+            <div className="interactive-icon">
               <img src="/icons/community.svg" alt="コミュニティ重視" />
             </div>
             <div>
@@ -40,7 +46,7 @@ export default function AboutSection() {
           </div>
 
           <div className="about-introduce-container flex items-start">
-            <div className="about-icon">  
+            <div className="interactive-icon">
               <img src="/icons/growth.svg" alt="持続的成長" />
             </div>
             <div>
