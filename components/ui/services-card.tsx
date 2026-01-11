@@ -14,15 +14,13 @@ export default function ServiceCard({
   onClick,
 }: ServiceCardProps) {
   return (
-    <div className="service-card">
-      <div className="service-icon">
-        <div>
+    <div className="services-card">
+      <div className="interactive-icon">
           <img src={icon} alt={title} />
-        </div>
       </div>
-      <h3 className="service-title">{title}</h3>
-      <p className="service-text">{text}</p>
-      <button onClick={onClick} className="service-button">
+      <h3 className="services-title">{title}</h3>
+      <p className="services-text">{text}</p>
+      <button onClick={onClick} className="services-button">
         {button}
       </button>
     </div>

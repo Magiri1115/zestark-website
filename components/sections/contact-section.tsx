@@ -1,30 +1,18 @@
+import SnsIconList from "@/components/ui/sns-icon-list";
+
 export default function ContactSection() {
   return (
     <section id="contact-section">
       <div className="contact-container">
         <h2>CONTACT</h2>
-        <p>お気軽にお問い合わせください</p>
+        <div className="contact-info">
+        <p>下記SNSのDMにてお気軽にお問い合わせください。</p>
+        <p>3営業日以内に返信いたします。</p>
+        </div>
       </div>
 
-      {/* mail-content */}
       <div className="contact-content">
-        <div className="mail-container">
-
-
-          {/* --- SNSアイコンエリア --- */}
-          <div className="contact-icon-item">
-            <div className="contact-icon">
-              <img src="/icons/discord.svg" alt="Discord" />
-            </div>
-            <div className="contact-icon">
-              <img src="/icons/twitter.svg" alt="Twitter" />
-            </div>
-            <div className="contact-icon">
-              <img src="/icons/github.svg" alt="GitHub" />
-            </div>
-          </div>
-          
-        </div>
+        <SnsIconList />
       </div>
     </section>
   );
