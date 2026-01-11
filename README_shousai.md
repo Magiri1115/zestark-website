@@ -140,6 +140,7 @@ tree -I "node_module*"
 ```
 
 ### DOM
+```
 body
 `-header
   |-common-section
@@ -209,7 +210,7 @@ body
           |   `- X-icon.svg
           `- div
              `- github-icon.svg
-
+```
 ### DOM補足（コンポーネント仕様）
 1. card-item
 TypeScriptで配列から生成
