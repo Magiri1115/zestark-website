@@ -21,7 +21,7 @@ export default function ServicesSection({ onChangeSection }: ServicesSectionProp
             要件や課題を整理し、保守性・拡張性を考慮したシステム構造へと落とし込みます。
             </>
           }
-          button="詳しく聞く"
+          button="話を聞く"
           onClick={() => onChangeSection('contact')}
         />
         <ServiceCard
@@ -32,7 +32,7 @@ export default function ServicesSection({ onChangeSection }: ServicesSectionProp
             「なぜその設計にするのか」を重視した技術教育と設計レビューを行います。
             </>
           }
-          button="詳しく聞く"
+          button="話を聞く"
           onClick={() => onChangeSection('contact')}
         />
         <ServiceCard
@@ -43,7 +43,7 @@ export default function ServicesSection({ onChangeSection }: ServicesSectionProp
             システム設計や技術選定を中心にnoteやDiscordを通じて学びあえる場を提供します。
             </>
           }
-          button="詳しく聞く"
+          button="話を聞く"
           onClick={() => onChangeSection('contact')}
         />
       </div>
