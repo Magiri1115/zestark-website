@@ -1,3 +1,5 @@
+import PCNotice from "@/components/ui/pc-notice";
+
 type HomeSectionProps = {
   onChangeSection: (section: string) => void;
 }
@@ -5,6 +7,7 @@ type HomeSectionProps = {
 export default function HomeSection({ onChangeSection }: HomeSectionProps) {
   return (
     <section id="home-section">
+      <PCNotice />
       <div className="home-section-container">
         <div>
           <div className="w-full flex flex-col items-center justify-center text-center px-4">
