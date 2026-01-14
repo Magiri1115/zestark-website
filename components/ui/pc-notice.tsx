@@ -2,10 +2,14 @@ import "@/styles/pc-notice.css";
 
 export default function PCNotice() {
   return (
-    <p className="pc-notice">
-      本サイトはPC（960px以上）での閲覧に最適化されています。
-      <br />
-      タブレット・スマホではレイアウトが崩れる可能性があります。
-    </p>
+    <div className="pc-notice-overlay">
+      <aside className="pc-notice">
+        <p>
+          本サイトは現在、PCでの閲覧に対応しています。
+          タブレット・スマートフォンは順次対応予定です。
+        </p>
+        <p>2026年1月14日現在</p>
+      </aside>
+    </div>
   );
 }
