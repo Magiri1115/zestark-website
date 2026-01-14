@@ -6,7 +6,7 @@ export default function BlogSection() {
     <section id="blog-section">
       <div className="blog-content">
         <h2>BLOG</h2>
-        <p>最新の活動報告とインサイト</p>
+        <p>最新の活動報告 (外部サイトに移動します)</p>
 
         <div className="blog-items">
           {blogItems.map((item, index) => (
