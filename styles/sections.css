@@ -104,10 +104,6 @@ root {
 /* ================================
    HOME
 ================================ */
-#home-section {
-  position: relative;
-}
-
 .button-container {
   gap: 1rem;
   margin-top: 2rem;
