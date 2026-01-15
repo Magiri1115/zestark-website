@@ -19,24 +19,6 @@ root {
     width: 20%;
   }
 }
-
-/* -----------------------------------------
-   タブレット・モバイルレスポンシブ（改良中）
-@media (min-width: 768px) and (max-width: 960px) {
-  .main-contents {
-    width: 35%;
-  }
-}
-
-
-@media (max-width: 767px) {
-  .main-contents {
-    width: 100%;
-    margin-bottom: 16px;
-    justify-content: center;
-  }
-}
------------------------------------------ */
 /* ================================
    Body
 ================================ */
@@ -128,13 +110,13 @@ root {
 
 .button-container {
   gap: 1rem;
-  margin-top: 3rem;
+  margin-top: 2rem;
   flex-direction: column;
 }
 
 .home-section-container {
   width: 50%;
-  margin: 3rem auto;
+  margin: 0 auto;
 }
 
 /* ================================

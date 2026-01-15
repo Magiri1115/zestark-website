@@ -85,8 +85,16 @@ body {
   padding-bottom: 60px;
 }
 
-.header-offset {
-  padding-top: 4vh;
+@media (min-width: 960px) {
+  .header-offset {
+    padding-top: 4vh;
+  }
+}
+
+@media (max-width: 959px) {
+  .header-offset {
+    padding-top: 0;
+  }
 }
 
 /* -----------------------------------------

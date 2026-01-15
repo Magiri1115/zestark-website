@@ -46,26 +46,25 @@ export default function Page() {
         {/* ----------------------------- */}
         <div className="header-border w-full z-50">
           <div className="header-container mx-auto justify-between pt-8 px-4 sm:px-8 lg:px-16">
-            <button className="mobile-menu-button">☰</button>
-              <div className="logo-item inline-flex items-center justify-center mb-4">
-                <div className="contents-star">
-                  <Image
-                    className="fixed-small"
-                    src="/zestark-star.svg"
-                    alt="Zestark Star Logo"
-                    width={96}
-                    height={77}
-                    priority
-                  />
-                </div>
-                <div className="contents-logo">
-                  <Image
-                    src="/zestark-logo.svg"
-                    alt="Zestark Logo"
-                    width={120}
-                    height={100}
-                    priority
-                  />
+            <div className="logo-item inline-flex items-center justify-center mb-4">
+              <div className="contents-star">
+                <Image
+                  className="fixed-small"
+                  src="/zestark-star.svg"
+                  alt="Zestark Star Logo"
+                  width={96}
+                  height={77}
+                  priority
+                />
+              </div>
+              <div className="contents-logo">
+                <Image
+                  src="/zestark-logo.svg"
+                  alt="Zestark Logo"
+                  width={120}
+                  height={100}
+                  priority
+                />
               </div>
             </div>   
             <div className="navi-wrapper">
@@ -75,7 +74,7 @@ export default function Page() {
         </div>
 
         {/* ----------------------------- */}
-        {/* 中央の切替可能なセクション */}
+        {/* セクション */}
         {/* ----------------------------- */}
         <div className="header-offset">
           <div className="sections-wrapper">

@@ -15,46 +15,38 @@ const NAV_ITEMS = [
 ];
 
 export default function Navbar({ onChangeSection }: NavbarProps) {
-  // 初期値は HOME
   const [activeSection, setActiveSection] = useState('home');
+  const [isOpen, setIsOpen] = useState(false);
 
   const handleClick = (id: string) => {
     setActiveSection(id);
     onChangeSection(id);
+    setIsOpen(false); // メニューを閉じる
   };
 
   return (
     <nav className="navbar">
+      {/* モバイル用ボタン */}
+      <button
+        className="mobile-menu-button"
+        onClick={() => setIsOpen(prev => !prev)}
+        aria-label="Open menu"
+      >
+        ☰
+      </button>
 
-        {/* ===== モバイル用トグル ===== */}
-      <input type="checkbox" id="nav-toggle" className="nav-toggle" />
-      <label htmlFor="nav-toggle" className="nav-hamburger">
-        <span />
-        <span />
-        <span />
-      </label>
-
-      <div className="navbar-divst">
-        {NAV_ITEMS.map((item) => {
+      <div className={`navbar-divst ${isOpen ? 'is-open' : ''}`}>
+        {NAV_ITEMS.map(item => {
           const isActive = activeSection === item.id;
 
           return (
-            <div
-              key={item.id}
-              className={`nav-item ${isActive ? 'is-active' : ''}`}
-            >
+            <div key={item.id} className={`nav-item ${isActive ? 'is-active' : ''}`}>
               <button
                 type="button"
                 className="nav-link"
-                onClick={() => {
-                  handleClick(item.id);
-                  // CSSトグルを閉じる（副作用なし）
-                  const checkbox = document.getElementById('nav-toggle') as HTMLInputElement;
-                  if (checkbox) checkbox.checked = false;
-                }}
+                onClick={() => handleClick(item.id)}
               >
-                <span className="nav-text">{item.label}</span>
-
+                {item.label}
               </button>
             </div>
           );
