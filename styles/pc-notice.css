@@ -39,13 +39,6 @@
   font-size: 0.875rem;
   color: #a0d8ff;
 }
-/*
-@media (min-width: 960px) {
-  .pc-notice-overlay {
-    display: none;
-  }
-}
-*/
 
 @media (min-width: 767px) {
   .pc-notice-overlay {
