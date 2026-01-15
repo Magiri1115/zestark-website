@@ -1,84 +1,31 @@
 /* ------------------------------
-   navbar.tsx
+   navbar.css
 ------------------------------ */
-.navi-wrapper {
-  display: flex;
-  align-items: center;
-  padding-right: 10%;
-}
 
-.navbar {
-  display: flex;
-  align-items: center;
-  width: 45%;
-  height: 100%;
-}
-
+/* ==============================
+   Navbar Base（全端末共通）
+================================ */
 .navbar-divst {
   display: flex;
   gap: 2rem;
-  margin: 0 auto;
-}
-
-.navbar-divst a {
-  text-decoration: none;
-  color: white;
-  font-weight: 500;
-  transition: opacity 0.2s ease;
-}
-
-.navbar-divst a:hover {
-  opacity: 0.7;
 }
 
 /* ==============================
-   Indicator Line
-================================ */
-.nav-indicator-line {
-  position: relative;
-  width: 2px;
-  height: 40px;
-  margin-right: 24px;
-  background-color: rgba(255, 255, 255, 0.2);
-}
-
-.indicator-dot {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background-color: white;
-  opacity: 0;
-  transform: translate(-50%, -50%);
-  transition: opacity 0.3s ease;
-}
-
-/* ==============================
-   Nav Item
+   Nav Item / Link
 ================================ */
 .nav-item {
   position: relative;
 }
 
-/* hoverした項目がある時、点が灯る */
-.navbar-divst:hover + .nav-indicator-line .indicator-dot {
-  opacity: 1;
-}
-
-/* ==============================
-   Nav Link
-================================ */
 .nav-link {
   background: none;
   border: none;
-  cursor: pointer;
   padding: 0;
+  cursor: pointer;
+
   color: rgba(255, 255, 255, 0.7);
   font-weight: 500;
   letter-spacing: 0.08em;
-  position: relative;
 }
 
 .nav-link:hover {
@@ -86,26 +33,82 @@
 }
 
 /* ==============================
-   Orbital Line
+   PC（960px以上）
 ================================ */
-.orbital-line {
-  position: absolute;
-  left: 0;
-  bottom: -6px;
-  width: 100%;
-  height: 8px;
+@media (min-width: 960px) {
+  .navi-wrapper {
+    margin-right: 5vw;
+  }
 
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 0 0 60% 60%;
+  .mobile-menu-button {
+    display: none;
+  }
 
-  opacity: 0;
-  transform: scaleX(0.85);
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  .navbar-divst {
+    flex-direction: row;
+    opacity: 1;
+    pointer-events: auto;
+    transform: none;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
 }
 
-.nav-link:hover .orbital-line {
-  opacity: 0.5;
-  transform: scaleX(1);
+/* ==============================
+   Mobile / Tablet（959px以下）
+================================ */
+@media (max-width: 959px) {
+  .header-left {
+    display: flex;
+    align-items: center;
+  }
+
+  .navi-wrapper {
+    display: block;
+  }
+
+  .mobile-menu-button {
+    position: relative;
+    top: 3vh;
+    left: 5vw;
+
+    font-size: 32px;
+    padding: 0;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+
+  /* ナビ全体をトグル基準にする */
+  .navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  /* モバイルメニュー本体 */
+  .navbar-divst {
+    flex-direction: column;
+    margin: 2rem 1rem 1rem 2rem;
+    gap: 1rem;
+    background: rgba(18, 22, 36, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    opacity: 0;
+    padding: 1rem 1.5rem;
+    transition:
+      opacity 0.25s ease,
+      transform 0.25s ease;
+  }
+
+  .navbar-divst.is-open {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
 }
 
 /* ==============================
@@ -126,7 +129,7 @@
 /* ==============================
    Active Section（点灯）
 ================================ */
-.nav-item.is-active .orbital-line {
+.nav-item.is-active {
   opacity: 0.55;
   transform: scaleX(1);
   animation: none;
@@ -135,7 +138,7 @@
 /* ==============================
    Hover on Inactive Section（点滅）
 ================================ */
-.nav-item:not(.is-active):hover .orbital-line {
+.nav-item:not(.is-active):hover {
   opacity: 0.4;
   transform: scaleX(1);
   animation: gentle-blink 2.2s ease-in-out infinite;

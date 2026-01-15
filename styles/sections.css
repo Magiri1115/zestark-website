@@ -19,24 +19,6 @@ root {
     width: 20%;
   }
 }
-
-/* -----------------------------------------
-   タブレット・モバイルレスポンシブ（改良中）
-@media (min-width: 768px) and (max-width: 960px) {
-  .main-contents {
-    width: 35%;
-  }
-}
-
-
-@media (max-width: 767px) {
-  .main-contents {
-    width: 100%;
-    margin-bottom: 16px;
-    justify-content: center;
-  }
-}
------------------------------------------ */
 /* ================================
    Body
 ================================ */
@@ -122,19 +104,15 @@ root {
 /* ================================
    HOME
 ================================ */
-#home-section {
-  position: relative;
-}
-
 .button-container {
   gap: 1rem;
-  margin-top: 3rem;
+  margin-top: 2rem;
   flex-direction: column;
 }
 
 .home-section-container {
   width: 50%;
-  margin: 3rem auto;
+  margin: 0 auto;
 }
 
 /* ================================
@@ -317,6 +295,32 @@ root {
   gap: 12px;
 }
 
+@media (max-width: 959px) {
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+    margin: 16px;
+  }
+
+  .about-items {
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .about-description {
+    text-align: center;
+  }
+
+  .image-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  .about-features {
+    display: none;
+  }
+}
+
 /* ================================
    BLOG
 ================================ */
@@ -324,13 +328,6 @@ root {
   text-align: center;
   margin: 3rem auto;
 }
-
-.blog-items {
-  display: flex;
-  justify-content: center;
-  gap: 24px;
-}
-
 /* ================================
    CONTACT
 ================================ */

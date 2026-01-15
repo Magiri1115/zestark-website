@@ -66,8 +66,7 @@ export default function Page() {
                   priority
                 />
               </div>
-            </div>
-            {/* Navbar に関数を渡す */}
+            </div>   
             <div className="navi-wrapper">
               <Navbar onChangeSection={setCurrentSection} />
             </div>
@@ -75,7 +74,7 @@ export default function Page() {
         </div>
 
         {/* ----------------------------- */}
-        {/* 中央の切替可能なセクション */}
+        {/* セクション */}
         {/* ----------------------------- */}
         <div className="header-offset">
           <div className="sections-wrapper">
