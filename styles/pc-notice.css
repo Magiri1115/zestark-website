@@ -1,5 +1,6 @@
 /* ================================
    PC Notice Overlay
+   ※PCとTabletに対応しました。
 ================================ */
 .pc-notice-overlay {
   position: fixed;
@@ -39,8 +40,7 @@
   color: #a0d8ff;
 }
 
-/* PCでは非表示 */
-@media (min-width: 960px) {
+@media (min-width: 767px) {
   .pc-notice-overlay {
     display: none;
   }

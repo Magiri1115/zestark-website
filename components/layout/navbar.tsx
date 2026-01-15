@@ -15,40 +15,38 @@ const NAV_ITEMS = [
 ];
 
 export default function Navbar({ onChangeSection }: NavbarProps) {
-  // 初期値は HOME
   const [activeSection, setActiveSection] = useState('home');
+  const [isOpen, setIsOpen] = useState(false);
 
   const handleClick = (id: string) => {
-    setActiveSection(id);       // 表示状態の更新
-    onChangeSection(id);        // 外部へ通知
+    setActiveSection(id);
+    onChangeSection(id);
+    setIsOpen(false); // メニューを閉じる
   };
 
   return (
     <nav className="navbar">
+      {/* モバイル用ボタン */}
+      <button
+        className="mobile-menu-button"
+        onClick={() => setIsOpen(prev => !prev)}
+        aria-label="Open menu"
+      >
+        ☰
+      </button>
 
-      {/* 静的インジケータ */}
-      <div className="nav-indicator-line">
-        <span className="indicator-dot" />
-      </div>
-
-      <div className="navbar-divst">
-        {NAV_ITEMS.map((item) => {
+      <div className={`navbar-divst ${isOpen ? 'is-open' : ''}`}>
+        {NAV_ITEMS.map(item => {
           const isActive = activeSection === item.id;
 
           return (
-            <div
-              key={item.id}
-              className={`nav-item ${isActive ? 'is-active' : ''}`}
-            >
+            <div key={item.id} className={`nav-item ${isActive ? 'is-active' : ''}`}>
               <button
                 type="button"
                 className="nav-link"
                 onClick={() => handleClick(item.id)}
               >
-                <span className="nav-text">{item.label}</span>
-
-                {/* オービタルライン */}
-                <span className="orbital-line" />
+                {item.label}
               </button>
             </div>
           );
