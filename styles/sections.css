@@ -328,13 +328,6 @@ root {
   text-align: center;
   margin: 3rem auto;
 }
-
-.blog-items {
-  display: flex;
-  justify-content: center;
-  gap: 24px;
-}
-
 /* ================================
    CONTACT
 ================================ */
