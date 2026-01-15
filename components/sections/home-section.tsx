@@ -14,8 +14,8 @@ export default function HomeSection({ onChangeSection }: HomeSectionProps) {
             <h1>
               青き先駆・黒き革新
             </h1>
-            <p className="text-xl text-gray-400 mb-12 leading-relaxed max-w-3xl mx-auto">
-              現実の課題を構造的に捉える設計力を軸に、技術支援・教育・発信を通じて<br />
+            <p className="mx-auto mb-12 max-w-[90%] sm:max-w-2xl lg:max-w-3xl text-base sm:text-lg lg:text-xlleading-relaxed text-gray-400">
+              現実の課題を構造的に捉える設計力を軸に、技術支援・教育・発信を通じて
               未来のクリエイターと新たな価値を創造します。
             </p>
 

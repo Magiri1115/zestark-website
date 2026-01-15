@@ -19,17 +19,20 @@ export default function Navbar({ onChangeSection }: NavbarProps) {
   const [activeSection, setActiveSection] = useState('home');
 
   const handleClick = (id: string) => {
-    setActiveSection(id);       // 表示状態の更新
-    onChangeSection(id);        // 外部へ通知
+    setActiveSection(id);
+    onChangeSection(id);
   };
 
   return (
     <nav className="navbar">
 
-      {/* 静的インジケータ */}
-      <div className="nav-indicator-line">
-        <span className="indicator-dot" />
-      </div>
+        {/* ===== モバイル用トグル ===== */}
+      <input type="checkbox" id="nav-toggle" className="nav-toggle" />
+      <label htmlFor="nav-toggle" className="nav-hamburger">
+        <span />
+        <span />
+        <span />
+      </label>
 
       <div className="navbar-divst">
         {NAV_ITEMS.map((item) => {
@@ -43,12 +46,15 @@ export default function Navbar({ onChangeSection }: NavbarProps) {
               <button
                 type="button"
                 className="nav-link"
-                onClick={() => handleClick(item.id)}
+                onClick={() => {
+                  handleClick(item.id);
+                  // CSSトグルを閉じる（副作用なし）
+                  const checkbox = document.getElementById('nav-toggle') as HTMLInputElement;
+                  if (checkbox) checkbox.checked = false;
+                }}
               >
                 <span className="nav-text">{item.label}</span>
 
-                {/* オービタルライン */}
-                <span className="orbital-line" />
               </button>
             </div>
           );

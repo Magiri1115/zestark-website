@@ -1,10 +1,37 @@
 /* ------------------------------
    navbar.tsx
 ------------------------------ */
-.navi-wrapper {
-  display: flex;
-  align-items: center;
-  padding-right: 10%;
+@media (min-width: 960px) {
+  .navi-wrapper {
+    margin-right: 5vw;
+  }
+  .mobile-menu-button {
+    display: none;
+  }
+}
+
+@media (max-width: 959px) {
+  .header-left {
+    display: flex;
+    align-items: center;
+  }
+  .mobile-menu-button {
+    position: fixed;
+    top: 3vh;
+    left: 5vw;
+    z-index: 100;
+    font-size: 32px;
+    padding-block: 0;
+    padding-inline: 0;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+
+  .navi-wrapper {
+    display: none;
+  }
 }
 
 .navbar {
@@ -29,30 +56,6 @@
 
 .navbar-divst a:hover {
   opacity: 0.7;
-}
-
-/* ==============================
-   Indicator Line
-================================ */
-.nav-indicator-line {
-  position: relative;
-  width: 2px;
-  height: 40px;
-  margin-right: 24px;
-  background-color: rgba(255, 255, 255, 0.2);
-}
-
-.indicator-dot {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background-color: white;
-  opacity: 0;
-  transform: translate(-50%, -50%);
-  transition: opacity 0.3s ease;
 }
 
 /* ==============================
@@ -86,26 +89,70 @@
 }
 
 /* ==============================
-   Orbital Line
-================================ */
-.orbital-line {
-  position: absolute;
-  left: 0;
-  bottom: -6px;
-  width: 100%;
-  height: 8px;
+   Mobile Navigation Toggle
+============================== */
 
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 0 0 60% 60%;
-
-  opacity: 0;
-  transform: scaleX(0.85);
-  transition: opacity 0.3s ease, transform 0.3s ease;
+.nav-toggle {
+  display: none;
 }
 
-.nav-link:hover .orbital-line {
-  opacity: 0.5;
-  transform: scaleX(1);
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.nav-hamburger span {
+  width: 24px;
+  height: 2px;
+  background: white;
+  display: block;
+}
+
+/* ==============================
+   Tablet / Mobile
+============================== */
+
+@media (max-width: 959px) {
+  .navbar {
+    position: fixed;
+    top: 5vh;
+    left: 3vw;
+    width: auto;
+  }
+
+  .nav-hamburger {
+    position: fixed;
+    top: 16px;
+    left: 16px;
+  }
+
+  .navbar-divst {
+    position: absolute;
+    top: 48px;
+    left: 0;
+
+    flex-direction: column;
+    gap: 1.2rem;
+
+    background: rgba(18, 22, 36, 0.95);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    padding: 1rem 1.5rem;
+
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-8px);
+    transition: all 0.25s ease;
+  }
+
+  /* チェック時に表示 */
+  .nav-toggle:checked ~ .navbar-divst {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
 }
 
 /* ==============================

@@ -28,7 +28,16 @@ body {
 /* -----------------------------------------
    page.tsx
 ----------------------------------------- */
-
+@media (min-width: 960px) {
+  .logo-item {
+    margin-left: 15vw;
+  }
+}
+@media (max-width: 959px) {
+  .logo-item {
+    margin: 0 auto;
+  }
+}
 .page-wrapper {
   position: relative;
   width: 100%;
@@ -41,7 +50,12 @@ body {
 .header-border {
   border-bottom: 1px solid var(--headerBorder);
   backdrop-filter: blur(10px);
-  padding: 16px 24px;
+  padding: 16px 0;
+}
+@media (max-width: 959px) {
+  .header-container {
+    justify-content: center;
+  }
 }
 
 .header-container {
@@ -50,10 +64,6 @@ body {
     width: 100%;
     height: 8vh;
     display: flex;
-}
-
-.logo-item {
-  padding-left: 15vw;
 }
 
 .contents-logo {
