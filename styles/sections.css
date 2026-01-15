@@ -295,6 +295,32 @@ root {
   gap: 12px;
 }
 
+@media (max-width: 959px) {
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+    margin: 16px;
+  }
+
+  .about-items {
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .about-description {
+    text-align: center;
+  }
+
+  .image-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  .about-features {
+    display: none;
+  }
+}
+
 /* ================================
    BLOG
 ================================ */
