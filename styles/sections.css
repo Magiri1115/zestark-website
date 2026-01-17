@@ -88,20 +88,6 @@ root {
 }
 
 /* ================================
-   Footer
-================================ */
-.footer {
-  text-align: center;
-  width: 100%;
-  font-size: 28px;
-  line-height: 64px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  z-index: 5;
-}
-
-/* ================================
    HOME
 ================================ */
 .button-container {
@@ -114,6 +100,13 @@ root {
   width: 50%;
   margin: 0 auto;
 }
+
+@media (max-width: 767px) {
+  .home-section-container {
+    width: 100%;
+  }
+}
+
 
 /* ================================
    Home Buttons
