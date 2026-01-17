@@ -150,6 +150,28 @@ npm run build が実行され、自動でデプロイ完了。
 デプロイ後、URL例：
 https://zestark.com
 
+## サイト修正方法
+### local
+.env.localファイルを開く
+true：表示を停止・操作不能
+flase：表示を再開・操作可能
+⇒変更後は必ず再起動！
+```
+npm run dev
+```
+### Vercel(本番環境)
+1. Vercel Dashboard にログイン
+2. 対象プロジェクトを選択
+3. Settings → Environment Variables を開く
+4. 以下の環境変数を設定・変更する
+|Name|Value|Enviroment|
+|---|---|---|
+|NEXT_PUBLIC_MAINTENANCE_PC|true/false|Production|
+|NEXT_PUBLIC_MAINTENANCE_TABLET|true/false|Production|
+|NEXT_PUBLIC_MAINTENANCE_MOBILE|true/false|Production|
+5. Save
+6. Redeploy
+
 ## README
 - README.md：概要・セットアップ
 - README_shousai.md：設計思想・仕様詳細
