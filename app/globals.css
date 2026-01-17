@@ -54,6 +54,10 @@ body {
   color: #ffffff;
 }
 
+.sections-wrapper {
+padding-top: 4vh
+}
+
 .header-border {
   border-bottom: 1px solid var(--headerBorder);
   backdrop-filter: blur(10px);
