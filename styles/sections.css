@@ -249,7 +249,7 @@ root {
 }
 
 .card-container {
-  margin: 3rem 40px;
+  margin: 3rem 2rem;
 }
 /* ================================
    ABOUT
@@ -270,7 +270,6 @@ root {
 .about-description {
   text-align: center;
 }
-
 
 .about-introduce-container {
     align-items: center;
@@ -321,6 +320,7 @@ root {
   text-align: center;
   margin: 3rem auto;
 }
+
 /* ================================
    CONTACT
 ================================ */
