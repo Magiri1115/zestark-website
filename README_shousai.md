@@ -21,62 +21,78 @@ npm run dev
 ブラウザで次を開く：
 http://localhost:3000
 
-## ディレクトリ構成
+## ディレクトリ構成(2026/01/18現在)
 ```
-zestark-website/
-├── README.md
-│
-├── app/
-│   ├── favicon.ico
-│   ├── globals.css               # Tailwind含む全体CSS
-│   ├── layout.tsx                # 全体レイアウト（Navbar + 背景）
-│   └── page.tsx                  # 1ページ構成のSPAメイン（各セクションを配置）
-│
-├── components/
-│   ├── layout/
-│   │   ├── Navbar.tsx            # ナビゲーションバー
-│   │   └── Footer.tsx            # フッター
-│   │
-│   ├── background/
-│   │   └── StarryBackground.tsx  # 星空背景アニメーション
-│   │
-│   ├── sections/                 # ページ内の大きなセクションをまとめる
-│   │   ├── HomeSection.tsx
-│   │   ├── ServicesSection.tsx
-│   │   ├── AboutSection.tsx
-│   │   ├── BlogSection.tsx
-│   │   └── ContactSection.tsx
-│   │
-│   └── ui/                       # 再利用UI（ボタン、カード、タイトルなど）
-│       ├── GlowButton.tsx
-│       └── Card.tsx
-│
-├── public/
-│   ├── images/                   # 背景写真
-│   │   ├── bg-home.jpg
-│   │   ├── bg-services.jpg
-│   │   ├── bg-about.jpg
-│   │   └── bg-contact.jpg
-│   ├── icons/
-│   │   ├── file.svg
-│   │   ├── globe.svg
-│   │   ├── next.svg
-│   │   ├── vercel.svg
-│   │   └── window.svg
-│   └── logo.svg
-│
-├── styles/
-│   ├── variables.css             # CSS変数・カラーテーマ
-│   ├── style.css              # セクションの共通スタイル
-│   └── animations.css            # アニメーション一元管理
-│
-├── next.config.ts
-├── postcss.config.mjs
-├── eslint.config.mjs
-├── tsconfig.json
-├── package.json
-└── package-lock.json
-
+$ tree -I "node_module*"
+.
+|-- README.md
+|-- README_responsive.md
+|-- README_shousai.md
+|-- app
+|   |-- globals.css
+|   |-- layout.tsx
+|   `-- page.tsx
+|-- components
+|   |-- background
+|   |   `-- starry-background.tsx
+|   |-- emergency
+|   |   |-- emergency-notice.tsx
+|   |   `-- useDevice.ts
+|   |-- interaction
+|   |   `-- swipe-container.tsx
+|   |-- layout
+|   |   |-- footer.tsx
+|   |   |-- header.tsx
+|   |   `-- navbar.tsx
+|   |-- sections
+|   |   |-- about-section.tsx
+|   |   |-- blog-section.tsx
+|   |   |-- contact-section.tsx
+|   |   |-- home-section.tsx
+|   |   `-- services-section.tsx
+|   `-- ui
+|       |-- blog-card.tsx
+|       |-- services-card.tsx
+|       |-- sns-icon-link.tsx
+|       `-- sns-icon-list.tsx
+|-- eslint.config.mjs
+|-- next-env.d.ts
+|-- next.config.ts
+|-- package-lock.json
+|-- package.json
+|-- postcss.config.mjs
+|-- public
+|   |-- icons
+|   |   |-- approach.svg
+|   |   |-- code.svg
+|   |   |-- community.svg
+|   |   |-- discord.svg
+|   |   |-- github.svg
+|   |   |-- growth.svg
+|   |   |-- streaming.svg
+|   |   |-- technique.svg
+|   |   `-- twitter.svg
+|   |-- images
+|   |   `-- zestark-feature.png
+|   |-- zestark-logo.svg
+|   `-- zestark-star.svg
+|-- scripts
+|   `-- data
+|       |-- blog.ts
+|       |-- pages.ts
+|       `-- sns-links.ts
+|-- styles
+|   |-- blog-card.css
+|   |-- emergency-notice.css
+|   |-- footer.css
+|   |-- header.css
+|   |-- interactive-icon.css
+|   |-- navbar.css
+|   |-- sections.css
+|   |-- services-card.css
+|   |-- sns-icon.css
+|   `-- variables.css
+`-- tsconfig.json
 ```
 ## ページ構成
 |ページ名|パス|概要|
@@ -110,35 +126,15 @@ https://zestark.com
 |**PC版**|`960px以上`|最大レイアウト。ナビゲーション常時表示。|
 |**タブレット版**| `768px～960px`||
 |**スマホ版**| `368px～767px`||
-
-```
-/* スマホ */
-@media (max-width: 767px) {
-  /* スマホ用スタイル */
-}
-
-/* タブレット */
-@media (min-width: 768px) and (max-width: 960px) {
-  /* タブレット用スタイル */
-}
-
-/* PC */
-@media (min-width: 960px) {
-  /* PC用スタイル */
-}
-```
-
 ### ライセンス
 このリポジトリの内容は、著作権により保護されています。
 無断転載・複製を禁じます
 🄫 2025 Zestark All Rights Reserved.
-
 ### 検索
 node_module以外のディレクトリを検索
 ```
 tree -I "node_module*"
 ```
-
 ### DOM
 ```
 body
