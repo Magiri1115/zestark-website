@@ -1,4 +1,8 @@
 # 事業サイト要件定義書
+## 見る前に
+このリポジトリはzestark公式Webサイトです。
+本サイトは「設計思想そのもの」を公開する目的で構築されています。
+詳細な設計思想・構造解説はGithub Wikiを参照してください。
 ## プロジェクト概要
 本プロジェクトは、インディーゲーム開発・プログラミング教育・コンテンツ配信事業を紹介する企業用Webサイトです。
 # 事業サイト（Next.js版）
@@ -26,53 +30,78 @@ npm run dev
 ブラウザで次を開く：
 http://localhost:3000
 
-## ディレクトリ構成
+## ディレクトリ構成(2026/01/18現在)
 ```
-zestark-website/
-├── README.md
-│
-├── app/
-│   ├── favicon.ico
-│   ├── globals.css               # 全体共通スタイル（Tailwind含む）
-│   ├── layout.tsx                # 全体レイアウト（Navbar + iframeコンテナ）
-│   └── page.tsx                  # メインページ（iframeと連動）
-│
-├── components/
-│   ├── layout/
-│   │   └── Navbar.tsx            # ナビゲーションバー（ボタンでiframe切替）
-│   └── FrameContainer.tsx        # iframe管理用コンポーネント
-│
-├── pages/iframe/                 # iframeで読み込まれる実ページ
-│   ├── home.html
-│   ├── services.html
-│   ├── about.html
-│   ├── contact.html
-│   └── blog.html
-│
-├── public/
-│   ├── images/
-│   │   ├── bg-home.jpg
-│   │   ├── bg-services.jpg
-│   │   ├── bg-about.jpg
-│   │   └── bg-contact.jpg
-│   ├── icons/
-│   │   ├── file.svg
-│   │   ├── globe.svg
-│   │   ├── next.svg
-│   │   ├── vercel.svg
-│   │   └── window.svg
-│   └── logo.svg
-│
-├── styles/
-│   ├── variables.css             # カラーテーマ・変数（CSS変数）
-│   └── iframe.css                # iframe内ページ共通のCSS
-│
-├── next.config.ts
-├── postcss.config.mjs
-├── eslint.config.mjs
-├── package.json
-├── package-lock.json
-└── tsconfig.json
+$ tree -I "node_module*"
+.
+|-- README.md
+|-- README_responsive.md
+|-- README_shousai.md
+|-- app
+|   |-- globals.css
+|   |-- layout.tsx
+|   `-- page.tsx
+|-- components
+|   |-- background
+|   |   `-- starry-background.tsx
+|   |-- emergency
+|   |   |-- emergency-notice.tsx
+|   |   `-- useDevice.ts
+|   |-- interaction
+|   |   `-- swipe-container.tsx
+|   |-- layout
+|   |   |-- footer.tsx
+|   |   |-- header.tsx
+|   |   `-- navbar.tsx
+|   |-- sections
+|   |   |-- about-section.tsx
+|   |   |-- blog-section.tsx
+|   |   |-- contact-section.tsx
+|   |   |-- home-section.tsx
+|   |   `-- services-section.tsx
+|   `-- ui
+|       |-- blog-card.tsx
+|       |-- services-card.tsx
+|       |-- sns-icon-link.tsx
+|       `-- sns-icon-list.tsx
+|-- eslint.config.mjs
+|-- next-env.d.ts
+|-- next.config.ts
+|-- package-lock.json
+|-- package.json
+|-- postcss.config.mjs
+|-- public
+|   |-- icons
+|   |   |-- approach.svg
+|   |   |-- code.svg
+|   |   |-- community.svg
+|   |   |-- discord.svg
+|   |   |-- github.svg
+|   |   |-- growth.svg
+|   |   |-- streaming.svg
+|   |   |-- technique.svg
+|   |   `-- twitter.svg
+|   |-- images
+|   |   `-- zestark-feature.png
+|   |-- zestark-logo.svg
+|   `-- zestark-star.svg
+|-- scripts
+|   `-- data
+|       |-- blog.ts
+|       |-- pages.ts
+|       `-- sns-links.ts
+|-- styles
+|   |-- blog-card.css
+|   |-- emergency-notice.css
+|   |-- footer.css
+|   |-- header.css
+|   |-- interactive-icon.css
+|   |-- navbar.css
+|   |-- sections.css
+|   |-- services-card.css
+|   |-- sns-icon.css
+|   `-- variables.css
+`-- tsconfig.json
 ```
 
 ## 構成のポイント
