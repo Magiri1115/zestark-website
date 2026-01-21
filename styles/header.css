@@ -4,16 +4,12 @@
 .header-container {
     align-items: center;
     width: 100%;
-    height: 8vh;
+    height: 60px;
     display: flex;
 }
 
 .contents-logo {
   padding-top: 10px;
-}
-
-.contents-star {
-  padding-top: 15px;
 }
 
 .main-content {
