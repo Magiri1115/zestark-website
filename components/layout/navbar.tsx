@@ -21,12 +21,11 @@ export default function Navbar({ onChangeSection }: NavbarProps) {
   const handleClick = (id: string) => {
     setActiveSection(id);
     onChangeSection(id);
-    setIsOpen(false); // メニューを閉じる
+    setIsOpen(false);
   };
 
   return (
     <nav className="navbar">
-      {/* モバイル用ボタン */}
       <button
         className="mobile-menu-button"
         onClick={() => setIsOpen(prev => !prev)}

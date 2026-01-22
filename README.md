@@ -1,10 +1,10 @@
 # 事業サイト要件定義書
+## 見る前に
+このリポジトリはzestark公式Webサイトです。
+本サイトは「設計思想そのもの」を公開する目的で構築されています。
+詳細な設計思想・構造解説はGithub Wikiを参照してください。
 ## プロジェクト概要
-本プロジェクトは、インディーゲーム開発・プログラミング教育・コンテンツ配信事業を紹介する企業用Webサイトです。
-# 事業サイト（Next.js版）
-## プロジェクト概要
-本プロジェクトは、インディーゲーム開発・プログラミング教育・YouTube配信事業を紹介する企業用Webサイトです。
-
+本プロジェクトは、企業用Webサイトです。
 ## 目的
 1. 事業内容の明確な説明
 2. 企業イメージ・ブランド価値の向上
@@ -14,92 +14,151 @@
 1. ゲーム開発・IT分野に興味のある個人
 2. プログラミング学習者
 3. 業務委託・開発依頼を検討している企業・個人
-## セットアップ手順
-### node.jsのインストール
-node -v
-でパスの確認
-### 依存関係のインストール
-npm install
-### 開発サーバーの起動
-npm run dev
 
-ブラウザで次を開く：
-http://localhost:3000
-
-## ディレクトリ構成
+## ディレクトリ構成(2026/01/18現在)
 ```
-zestark-website/
-├── README.md
-│
-├── app/
-│   ├── favicon.ico
-│   ├── globals.css               # 全体共通スタイル（Tailwind含む）
-│   ├── layout.tsx                # 全体レイアウト（Navbar + iframeコンテナ）
-│   └── page.tsx                  # メインページ（iframeと連動）
-│
-├── components/
-│   ├── layout/
-│   │   └── Navbar.tsx            # ナビゲーションバー（ボタンでiframe切替）
-│   └── FrameContainer.tsx        # iframe管理用コンポーネント
-│
-├── pages/iframe/                 # iframeで読み込まれる実ページ
-│   ├── home.html
-│   ├── services.html
-│   ├── about.html
-│   ├── contact.html
-│   └── blog.html
-│
-├── public/
-│   ├── images/
-│   │   ├── bg-home.jpg
-│   │   ├── bg-services.jpg
-│   │   ├── bg-about.jpg
-│   │   └── bg-contact.jpg
-│   ├── icons/
-│   │   ├── file.svg
-│   │   ├── globe.svg
-│   │   ├── next.svg
-│   │   ├── vercel.svg
-│   │   └── window.svg
-│   └── logo.svg
-│
-├── styles/
-│   ├── variables.css             # カラーテーマ・変数（CSS変数）
-│   └── iframe.css                # iframe内ページ共通のCSS
-│
-├── next.config.ts
-├── postcss.config.mjs
-├── eslint.config.mjs
-├── package.json
-├── package-lock.json
-└── tsconfig.json
+$ tree -I "node_module*"
+.
+|-- README.md
+|-- README_responsive.md
+|-- README_shousai.md
+|-- app
+|   |-- globals.css
+|   |-- layout.tsx
+|   `-- page.tsx
+|-- components
+|   |-- background
+|   |   `-- starry-background.tsx
+|   |-- emergency
+|   |   |-- emergency-notice.tsx
+|   |   `-- useDevice.ts
+|   |-- interaction
+|   |   `-- swipe-container.tsx
+|   |-- layout
+|   |   |-- footer.tsx
+|   |   |-- header.tsx
+|   |   `-- navbar.tsx
+|   |-- sections
+|   |   |-- about-section.tsx
+|   |   |-- blog-section.tsx
+|   |   |-- contact-section.tsx
+|   |   |-- home-section.tsx
+|   |   `-- services-section.tsx
+|   `-- ui
+|       |-- blog-card.tsx
+|       |-- services-card.tsx
+|       |-- sns-icon-link.tsx
+|       `-- sns-icon-list.tsx
+|-- eslint.config.mjs
+|-- next-env.d.ts
+|-- next.config.ts
+|-- package-lock.json
+|-- package.json
+|-- postcss.config.mjs
+|-- public
+|   |-- icons
+|   |   |-- approach.svg
+|   |   |-- code.svg
+|   |   |-- community.svg
+|   |   |-- discord.svg
+|   |   |-- github.svg
+|   |   |-- growth.svg
+|   |   |-- streaming.svg
+|   |   |-- technique.svg
+|   |   `-- twitter.svg
+|   |-- images
+|   |   `-- zestark-feature.png
+|   |-- zestark-logo.svg
+|   `-- zestark-star.svg
+|-- scripts
+|   `-- data
+|       |-- blog.ts
+|       |-- pages.ts
+|       `-- sns-links.ts
+|-- styles
+|   |-- blog-card.css
+|   |-- emergency-notice.css
+|   |-- footer.css
+|   |-- header.css
+|   |-- interactive-icon.css
+|   |-- navbar.css
+|   |-- sections.css
+|   |-- services-card.css
+|   |-- sns-icon.css
+|   `-- variables.css
+`-- tsconfig.json
 ```
 
 ## 構成のポイント
-|構成要素|役割|
-|---|---|
-|app/|Next.jsのApp Routerルート<br>layout.tsxにNavbar+iframe構成を実装|
-|app/layout.tsx|全体レイアウト定義<br>Navbar+iframe領域を配置|
-|app/page.tsx|メインページ<br>Navbarからiframeのsrcを制御|
-|Navbar.tsx|各ページボタン（Home / Services / About / Contact / Blog）を提供|
-|FrameContainer.tsx|iframeのsrcを受け取り<br>コンテンツを動的に切り替える|
-|pages/iframe/*.html|実際の事業紹介ページ<br>静的HTMLとしてiframe内で表示される|
-|public/images/|背景・ロゴなどの静的リソース|
-|styles/|共通CSSとiframeページ用CSSを分離|
-|components/layout/Navbar.tsx|iframeの切替を行うナビゲーションバー<br>状態管理（useState）でURL変更|
-|components/FrameContainer.tsx|iframeを1つだけ配置し、Navbarの操作に応じて表示内容を切り替える|
-|pages/iframe/|各事業ページを独立した静的HTMLとして配置<br>iframeで読み込まれる対象|
-|public/|静的ファイル（画像・SVG・ロゴ）<br>Next.jsが自動配信|
-|styles/|CSS変数・iframe専用スタイルなど、Next.jsのグローバルCSS外に分離|
+| パス              | 役割                                       |
+| --------------- | ---------------------------------------- |
+| app/            | Next.js App Router のルート                  |
+| app/layout.tsx  | 全体レイアウト定義（Header / Navbar / Footer / 背景） |
+| app/page.tsx    | メインページ<br>各 Section コンポーネントを順に配置         |
+| app/globals.css | Tailwind / リセット / 全体共通スタイル               |
+| ファイル       | 役割                        |
+| ---------- | ------------------------- |
+| header.tsx | サイト上部の構造・タイトル表示           |
+| navbar.tsx | ナビゲーションバー<br>セクション移動・UI制御 |
+| footer.tsx | フッター（コピーライト等）             |
+| ファイル                 | 役割           |
+| -------------------- | ------------ |
+| home-section.tsx     | トップ・全体概要     |
+| services-section.tsx | 事業内容紹介       |
+| about-section.tsx    | 理念・チーム紹介     |
+| blog-section.tsx     | 外部ブログ導線・活動紹介 |
+| contact-section.tsx  | 問い合わせ・SNSリンク |
+| ファイル                 | 役割           |
+| -------------------- | ------------ |
+| home-section.tsx     | トップ・全体概要     |
+| services-section.tsx | 事業内容紹介       |
+| about-section.tsx    | 理念・チーム紹介     |
+| blog-section.tsx     | 外部ブログ導線・活動紹介 |
+| contact-section.tsx  | 問い合わせ・SNSリンク |
+| ファイル              | 役割        |
+| ----------------- | --------- |
+| services-card.tsx | サービス紹介カード |
+| blog-card.tsx     | ブログカードUI  |
+| sns-icon-link.tsx | 単一SNSリンク  |
+| sns-icon-list.tsx | SNSリンク集合  |
+| ファイル                  | 役割         |
+| --------------------- | ---------- |
+| starry-background.tsx | サイト全体の背景演出 |
+| ファイル                | 役割                  |
+| ------------------- | ------------------- |
+| swipe-container.tsx | スワイプ操作などのインタラクション制御 |
+| ファイル                 | 役割                |
+| -------------------- | ----------------- |
+| emergency-notice.tsx | 緊急告知表示用UI         |
+| useDevice.ts         | 端末判定・レスポンシブ補助ロジック |
+| ファイル         | 役割           |
+| ------------ | ------------ |
+| blog.ts      | ブログ表示用データ定義  |
+| pages.ts     | セクション定義・メタ情報 |
+| sns-links.ts | SNSリンク定義     |
+| ファイル                                 | 役割          |
+| ------------------------------------ | ----------- |
+| variables.css                        | CSS変数・テーマ定義 |
+| sections.css                         | セクション共通スタイル |
+| navbar.css / header.css / footer.css | レイアウト系CSS   |
+| services-card.css / blog-card.css    | UI単位CSS     |
+| emergency-notice.css                 | 緊急UI専用      |
+| パス               | 役割      |
+| ---------------- | ------- |
+| public/icons/    | SVGアイコン |
+| public/images/   | 画像素材    |
+| zestark-logo.svg | ロゴ      |
+| zestark-star.svg | 装飾用     |
+
 
 ## ページ構成
 |ページ名|パス|概要|
 |---|---|---|
-|ホーム|/sections/HomeSection.tsx|トップページ、全体紹介|
-|サービス|/sections/ServicesSection.tsx|ゲーム開発・教育・配信事業の内容|
-|会社紹介|/sections/AboutSection.tsx|チーム・理念紹介|
-|お問い合わせ|/sections/ContactSection.tsx|連絡フォームやSNSリンク|
-|ブログ|/sections/BlogSection.tsx|活動報告・コラム|
+|ホーム|/sections/home-ection.tsx|トップページ|
+|サービス|/sections/services-section.tsx|事業の内容|
+|会社紹介|/sections/about-section.tsx|チーム・理念紹介|
+|お問い合わせ|/sections/contact-section.tsx|SNSリンク|
+|ブログ|/sections/blog-section.tsx|活動報告・コラム|
 
 ## 対応デバイス
 1. PC
@@ -149,6 +208,18 @@ npm run build が実行され、自動でデプロイ完了。
 
 デプロイ後、URL例：
 https://zestark.com
+
+## セットアップ手順
+### node.jsのインストール
+node -v
+でパスの確認
+### 依存関係のインストール
+npm install
+### 開発サーバーの起動
+npm run dev
+
+ブラウザで次を開く：
+http://localhost:3000
 
 ## サイト修正方法
 ### local

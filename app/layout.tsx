@@ -11,6 +11,8 @@ import "../styles/navbar.css";
 import "../styles/footer.css";
 import "../styles/header.css";
 
+import ShinobiTracker from "../components/sinobi-tracker";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -34,6 +36,7 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <ShinobiTracker />
         <main>{children}</main>
       </body>
     </html>
