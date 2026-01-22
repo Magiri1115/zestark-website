@@ -9,7 +9,6 @@ import StarryBackground from '../components/background/starry-background';
 import Navbar from '../components/layout/navbar';
 import Footer from '../components/layout/footer';
 import Header from '../components/layout/header';
-
 {/* ----------------------------- */}
 {/* Sections */}
 {/* ----------------------------- */}
@@ -44,34 +43,22 @@ export default function Page() {
   const maintenanceMobile = process.env.NEXT_PUBLIC_MAINTENANCE_MOBILE === "true";
 
   return (
-    <main className="min-w-[368px] min-h-[480px]">
+    <div className="min-w-[368px] min-h-[480px]">
       <div className="page-wrapper">
         <StarryBackground />
-        {/* ----------------------------- */}
-        {/* header */}
-        {/* ----------------------------- */}
         <Header onChangeSection={setCurrentSection} />
-        {/* ----------------------------- */}
-        {/* 障害時対応 */}
-        {/* ----------------------------- */}     
-        <EmergencyNotice
-          maintenancePC={process.env.NEXT_PUBLIC_MAINTENANCE_PC === "true"}
-          maintenanceTablet={process.env.NEXT_PUBLIC_MAINTENANCE_TABLET === "true"}
-          maintenanceMobile={process.env.NEXT_PUBLIC_MAINTENANCE_MOBILE === "true"}
-        />
-        {/* ----------------------------- */}
-        {/* セクション */}
-        {/* ----------------------------- */}
-        <div className="header-offset">
+        <main className="main-container">
+          <EmergencyNotice
+            maintenancePC={process.env.NEXT_PUBLIC_MAINTENANCE_PC === "true"}
+            maintenanceTablet={process.env.NEXT_PUBLIC_MAINTENANCE_TABLET === "true"}
+            maintenanceMobile={process.env.NEXT_PUBLIC_MAINTENANCE_MOBILE === "true"}
+          />
           <div className="sections-wrapper">
             {renderSection()}
           </div>
-        </div>
-        {/* ----------------------------- */}
-        {/* footer */}
-        {/* ----------------------------- */}
+        </main>
         <Footer />
       </div>
-    </main>
+    </div>
   );
 }

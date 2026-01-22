@@ -17,8 +17,7 @@
 .footer-inner {
   display: flex;
   justify-content: center;
-  padding: 2vh 4vw;
-
+  padding: 4px 4vw;
 }
 
 .footer-copy {

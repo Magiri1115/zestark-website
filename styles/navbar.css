@@ -61,9 +61,8 @@
 
   .mobile-menu-button {
     position: relative;
-    top: 3vh;
+    top: 24px;
     left: 5vw;
-
     font-size: 32px;
     padding: 0;
     background: none;
@@ -72,17 +71,15 @@
     cursor: pointer;
   }
 
-  /* ナビ全体をトグル基準にする */
   .navbar {
     position: absolute;
     top: 0;
     left: 0;
   }
 
-  /* モバイルメニュー本体 */
   .navbar-divst {
     flex-direction: column;
-    margin: 3vh 0 0 5vw;
+    margin: 28px 0 0 5vw;
     gap: 1rem;
     background: rgba(18, 22, 36);
     border: 1px solid rgba(255, 255, 255, 0.08);
