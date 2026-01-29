@@ -2,7 +2,6 @@
    Main Layout・変数
 ================================ */
 main {
-  position: relative;
   z-index: 1;
 }
 
@@ -99,6 +98,12 @@ root {
 .home-section-container {
   width: 50%;
   margin: 0 auto;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-block-start: 0rem;
+  margin-block-end: 0rem;
 }
 
 @media (max-width: 767px) {
@@ -318,7 +323,17 @@ root {
 ================================ */
 .blog-content {
   text-align: center;
-  margin: 3rem auto;
+}
+
+@media (max-width: 959px) {
+  .blog-content {
+    margin: 2rem 1rem;
+    padding-bottom: 2rem;
+  }
+
+  .blog-items {
+    margin-bottom: 2rem;
+  }
 }
 
 /* ================================
