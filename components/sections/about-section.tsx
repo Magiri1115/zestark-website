@@ -27,21 +27,21 @@ export default function AboutSection() {
         <div className="about-features">
           <div className="about-introduce-container flex items-start">
             <div className="interactive-icon">
-              <img src="/icons/approach.svg" alt="本質的設計" />
+              <img src="/icons/approach.svg" alt="壊れない前提" />
             </div>
             <div>
-              <h3>本質的設計</h3>
-              <p>変化や成長を前提にした堅牢設計</p>
+              <h3>壊れない前提</h3>
+              <p>想定外に備えた構造設計</p>
             </div>
           </div>
 
           <div className="about-introduce-container flex items-start">
             <div className="interactive-icon">
-              <img src="/icons/community.svg" alt="選択肢を守る" />
+              <img src="/icons/community.svg" alt="致命傷にならない設計" />
             </div>
             <div>
-              <h3>選択肢を守る</h3>
-              <p>未来を縛らない設計思想を提供</p>
+              <h3>致命傷にならない設計</h3>
+              <p>事業リスクを技術で分散</p>
             </div>
           </div>
 
