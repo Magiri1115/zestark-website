@@ -13,7 +13,7 @@ export default function HomeSection({ onChangeSection }: HomeSectionProps) {
             <h2>MISSION</h2>
             <p className="mx-auto mb-12 max-w-[90%] sm:max-w-2xl lg:max-w-3xl text-base sm:text-lg lg:text-xlleading-relaxed text-gray-400 whitespace-pre-line">
               Zestarkは、将来の選択肢を狭めない設計を通じて、
-              あなたの事業が長く続くための土台をつくります。
+              あなたの事業が100年続くためのシステムの土台をつくります。
             </p>
 
             <div className="button-container flex items-center justify-center gap-6">
