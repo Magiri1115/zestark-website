@@ -27,31 +27,31 @@ export default function AboutSection() {
         <div className="about-features">
           <div className="about-introduce-container flex items-start">
             <div className="interactive-icon">
-              <img src="/icons/approach.svg" alt="革新的なアプローチ" />
+              <img src="/icons/approach.svg" alt="本質的設計" />
             </div>
             <div>
-              <h3>革新的なアプローチ</h3>
-              <p>最新技術と創造性を融合させた独自のソリューション</p>
+              <h3>本質的設計</h3>
+              <p>変化や成長を前提にした堅牢設計</p>
             </div>
           </div>
 
           <div className="about-introduce-container flex items-start">
             <div className="interactive-icon">
-              <img src="/icons/community.svg" alt="コミュニティ重視" />
+              <img src="/icons/community.svg" alt="選択肢を守る" />
             </div>
             <div>
-              <h3>コミュニティ重視</h3>
-              <p>クライアントとの対話を大切にする協働スタイル</p>
+              <h3>選択肢を守る</h3>
+              <p>未来を縛らない設計思想を提供</p>
             </div>
           </div>
 
           <div className="about-introduce-container flex items-start">
             <div className="interactive-icon">
-              <img src="/icons/growth.svg" alt="持続的成長" />
+              <img src="/icons/growth.svg" alt="判断に責任" />
             </div>
             <div>
-              <h3>持続的成長</h3>
-              <p>長期的視点でのビジネス発展をサポート</p>
+              <h3>判断に責任</h3>
+              <p>長期的な事業視点で技術を選定</p>
             </div>
           </div>
         </div>
