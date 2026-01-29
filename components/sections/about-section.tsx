@@ -14,7 +14,7 @@ export default function AboutSection() {
                   alt="Zestarkの設計思想を表すイメージ"
                   width={450}
                   height={250}
-                  className="rounded-lg opacity-70"
+                  className="rounded-lg"
                 />
               </div>
               <p>

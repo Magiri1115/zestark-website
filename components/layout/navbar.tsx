@@ -26,13 +26,17 @@ export default function Navbar({ onChangeSection }: NavbarProps) {
 
   return (
     <nav className="navbar">
-      <button
-        className="mobile-menu-button"
-        onClick={() => setIsOpen(prev => !prev)}
-        aria-label="Open menu"
-      >
-        ☰
-      </button>
+    <button
+      className="mobile-menu-button"
+      onClick={() => setIsOpen(prev => !prev)}
+      aria-label="Open menu"
+    >
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <line x1="3" y1="6" x2="21" y2="6" />
+        <line x1="3" y1="12" x2="21" y2="12" />
+        <line x1="3" y1="18" x2="21" y2="18" />
+      </svg>
+    </button>
 
       <div className={`navbar-divst ${isOpen ? 'is-open' : ''}`}>
         {NAV_ITEMS.map(item => {

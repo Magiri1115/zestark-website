@@ -2,7 +2,6 @@
    Main Layout・変数
 ================================ */
 main {
-  position: relative;
   z-index: 1;
 }
 
@@ -102,7 +101,7 @@ root {
 }
 
 h1 {
-  font-size: 1.7rem;
+  font-size: 2.5rem;
   margin-block-start: 0rem;
   margin-block-end: 0rem;
 }
