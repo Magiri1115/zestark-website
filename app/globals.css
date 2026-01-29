@@ -62,8 +62,23 @@ body {
 padding-top: 4vh
 }
 
-.main-container {
-  height: calc(100vh - 140px);
+/* PC: 固定高さ */
+@media (min-width: 960px) {
+  .main-container {
+    height: calc(100vh - 140px);
+    overflow: hidden;
+  }
+}
+
+/* スマホ・タブレット: スクロール可能 */
+@media (max-width: 959px) {
+  .main-container {
+    flex: 1;
+    overflow-y: auto; 
+    overflow-x: hidden;
+    min-height: calc(100vh - 140px);
+    padding-bottom: 60px;
+  }
 }
 
 .header-border {

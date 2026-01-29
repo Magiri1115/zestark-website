@@ -325,6 +325,17 @@ h1 {
   text-align: center;
 }
 
+@media (max-width: 959px) {
+  .blog-content {
+    margin: 2rem 1rem;
+    padding-bottom: 2rem;
+  }
+
+  .blog-items {
+    margin-bottom: 2rem;
+  }
+}
+
 /* ================================
    CONTACT
 ================================ */
