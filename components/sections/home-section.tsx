@@ -10,7 +10,6 @@ export default function HomeSection({ onChangeSection }: HomeSectionProps) {
       <div className="home-section-container">
         <div>
           <div className="w-full flex flex-col items-center justify-center text-center px-4">
-            <h1>100年後も愛されるシステムを</h1>
             <h2>MISSION</h2>
             <p className="mx-auto mb-12 max-w-[90%] sm:max-w-2xl lg:max-w-3xl text-base sm:text-lg lg:text-xlleading-relaxed text-gray-400 whitespace-pre-line">
               Zestarkは、将来の選択肢を狭めない設計を通じて、

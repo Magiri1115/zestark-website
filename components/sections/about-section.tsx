@@ -18,7 +18,7 @@ export default function AboutSection() {
                 />
               </div>
               <p>
-                Zestarkは「設計力」を強みとする技術チームです。
+                Zestarkは「設計力」を強みとしております。
               </p>
             </div>
           </div>
