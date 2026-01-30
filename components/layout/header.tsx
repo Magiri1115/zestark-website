@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import Navbar from './navbar';
+import Navbar from './Navbar';
 
 type HeaderProps = {
   onChangeSection: (section: string) => void;

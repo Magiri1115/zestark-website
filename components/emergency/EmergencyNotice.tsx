@@ -1,7 +1,7 @@
 "use client";
 
 import "@/styles/emergency-notice.css";
-import { useDevice } from "./useDevice";
+import { useDevice } from "../../app/hook/useDevice";
 
 type Props = {
   maintenancePC: boolean;

@@ -1,4 +1,4 @@
-import { SnsLink } from "@/scripts/data/sns-links";
+import { SnsLink } from "@/app/data/sns-links";
 
 type Props = {
   item: SnsLink;

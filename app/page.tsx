@@ -5,19 +5,19 @@ import Image from 'next/image';
 {/* ----------------------------- */}
 {/* Layout */}
 {/* ----------------------------- */}
-import StarryBackground from '../components/background/starry-background';
-import Navbar from '../components/layout/navbar';
-import Footer from '../components/layout/footer';
-import Header from '../components/layout/header';
+import StarryBackground from '../components/background/StarryBackground';
+import Navbar from '../components/layout/Navbar';
+import Footer from '../components/layout/Footer';
+import Header from '../components/layout/Header';
 {/* ----------------------------- */}
 {/* Sections */}
 {/* ----------------------------- */}
-import HomeSection from '../components/sections/home-section';
-import ServicesSection from '../components/sections/services-section';
-import AboutSection from '../components/sections/about-section';
-import BlogSection from '../components/sections/blog-section';
-import ContactSection from '../components/sections/contact-section';
-import EmergencyNotice from '../components/emergency/emergency-notice';
+import HomeSection from '../components/sections/HomeSection';
+import ServicesSection from '../components/sections/ServicesSection';
+import AboutSection from '../components/sections/AboutSection';
+import BlogSection from '../components/sections/BlogSection';
+import ContactSection from '../components/sections/ContactSection';
+import EmergencyNotice from '../components/emergency/EmergencyNotice';
 
 export default function Page() {
   const [currentSection, setCurrentSection] = useState('home');

@@ -1,4 +1,4 @@
-import PCNotice from "@/components/emergency/emergency-notice";
+import PCNotice from "@/components/emergency/EmergencyNotice";
 
 type HomeSectionProps = {
   onChangeSection: (section: string) => void;

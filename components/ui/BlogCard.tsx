@@ -1,4 +1,4 @@
-import { BlogItem } from "@/scripts/data/blog";
+import { BlogItem } from "@/app/data/blog";
 
 type Props = {
   item: BlogItem;

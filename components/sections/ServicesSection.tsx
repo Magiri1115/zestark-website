@@ -1,8 +1,8 @@
 'use client';
 
-import ServiceCard from '../ui/services-card';
-import SwipeContainer from '../interaction/swipe-container';
-import { ServiceItem, services } from '@/scripts/data/services';
+import ServiceCard from '../ui/ServicesCard';
+import SwipeContainer from '../interaction/SwipeContainer';
+import { ServiceItem, services } from '@/app/data/services';
 
 type Props = {
   onChangeSection: (section: string) => void;
