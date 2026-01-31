@@ -1,0 +1,19 @@
+/* ================================
+   Home Section
+================================ */
+.button-container {
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-direction: column;
+}
+
+.home-section-container {
+  width: 50%;
+  margin: 0 auto;
+}
+
+@media (max-width: 767px) {
+  .home-section-container {
+    width: 100%;
+  }
+}

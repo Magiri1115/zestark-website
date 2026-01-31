@@ -1,5 +1,33 @@
 /* ================================
-   Services-card Styles
+   Blog Card
+================================ */
+.blog-card {
+  display: block;
+  padding: 1.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.blog-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+.blog-card--disabled {
+  pointer-events: none;
+  opacity: 0.4;
+  border-color: rgba(255, 255, 255, 0.08);
+  cursor: default;
+}
+
+.blog-card--disabled span {
+  opacity: 0.6;
+}
+
+/* ================================
+   Services Card
 ================================ */
 .services-card {
     background-color: rgba(18, 22, 36, 0.9);
@@ -63,7 +91,6 @@
         box-shadow 0.3s ease;
 }
 
-
 .services-card button::after {
     content: ' ⇒';
     display: inline-block;
@@ -101,56 +128,4 @@
     0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); opacity: 0; }
     50% { opacity: 1; }
     100% { transform: translateX(100%) translateY(100%) rotate(45deg); opacity: 0; }
-}
-
-/* ================================
-   Responsive Control
-================================ */
-.pc-only {
-  display: grid;
-  margin: 1rem 2rem;
-  gap: 3rem;
-}
-
-.sp-only {
-  display: none;
-}
-
-@media (max-width: 959px) {
-  .pc-only {
-    display: none;
-  }
-
-  .sp-only {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-/* ================================
-   Swipe Area
-================================ */
-.services-swipe-wrapper {
-  width: 100%;
-  max-width: 360px;
-  margin: 0 auto;
-}
-
-/* ================================
-   Swipe Telop
-================================ */
-.swipe-telop {
-  margin-top: 16px;
-  font-size: 12px;
-  color: rgba(200, 210, 255, 0.7);
-  text-align: center;
-  letter-spacing: 0.1em;
-  animation: swipe-hint 1.8s infinite ease-in-out;
-}
-
-@keyframes swipe-hint {
-  0% { opacity: 0.4; }
-  50% { opacity: 1; }
-  100% { opacity: 0.4; }
 }

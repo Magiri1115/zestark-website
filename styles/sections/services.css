@@ -1,0 +1,62 @@
+/* ================================
+   Services Section
+================================ */
+.services-container {
+  text-align: center;
+}
+
+.card-container {
+  margin: 3rem 2rem;
+}
+
+/* ================================
+   Responsive Control
+================================ */
+.pc-only {
+  display: grid;
+  margin: 1rem 2rem;
+  gap: 3rem;
+}
+
+.sp-only {
+  display: none;
+}
+
+@media (max-width: 959px) {
+  .pc-only {
+    display: none;
+  }
+
+  .sp-only {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* ================================
+   Swipe Area
+================================ */
+.services-swipe-wrapper {
+  width: 100%;
+  max-width: 360px;
+  margin: 0 auto;
+}
+
+/* ================================
+   Swipe Telop
+================================ */
+.swipe-telop {
+  margin-top: 16px;
+  font-size: 12px;
+  color: rgba(200, 210, 255, 0.7);
+  text-align: center;
+  letter-spacing: 0.1em;
+  animation: swipe-hint 1.8s infinite ease-in-out;
+}
+
+@keyframes swipe-hint {
+  0% { opacity: 0.4; }
+  50% { opacity: 1; }
+  100% { opacity: 0.4; }
+}

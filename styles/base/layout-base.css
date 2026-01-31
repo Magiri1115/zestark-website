@@ -1,0 +1,77 @@
+/* ================================
+   Main Layout Base
+================================ */
+main {
+  z-index: 1;
+}
+
+/* -----------------------------------------
+   Legacy/Unused Layout Classes
+   (Kept for backward compatibility)
+----------------------------------------- */
+.body-contents {
+  position: fixed;
+  top: 50%;
+  left: 2rem;
+  right: 2rem;
+  height: 60%;
+  transform: translateY(-50%);
+  z-index: 30;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.home-banners {
+  padding: 32px;
+  height: 100%;
+}
+
+.news-contents {
+  text-align: center;
+  height: 50%;
+}
+
+.news-contents.bottom {
+  margin-top: 16px;
+}
+
+.logo-area {
+  position: fixed;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 40;
+}
+
+/* ================================
+   Navigation Frame (Legacy)
+================================ */
+.navi-frame {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 64px;
+}
+
+.nav-contents {
+  font-size: 48px;
+  line-height: 64px;
+  transition: color .3s;
+}
+
+.nav-contents:hover {
+  color: #60a5fa;
+}
+
+/* ================================
+   Responsive Base
+================================ */
+@media (min-width: 961px) {
+  .main-contents {
+    width: 20%;
+  }
+}
