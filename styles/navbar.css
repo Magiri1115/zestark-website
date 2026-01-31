@@ -1,5 +1,5 @@
 /* ==============================
-   Navbar Component
+   Navbar Base（全端末共通）
 ================================ */
 .navbar-divst {
   display: flex;
@@ -116,7 +116,7 @@
 }
 
 /* ==============================
-   Active Section (点灯)
+   Active Section（点灯）
 ================================ */
 .nav-item.is-active {
   opacity: 0.55;
@@ -125,7 +125,7 @@
 }
 
 /* ==============================
-   Hover on Inactive Section (点滅)
+   Hover on Inactive Section（点滅）
 ================================ */
 .nav-item:not(.is-active):hover {
   opacity: 0.4;

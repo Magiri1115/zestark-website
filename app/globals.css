@@ -1,48 +1,161 @@
-/* ================================
-   Global Styles Entry Point
-   
-   This file imports all CSS modules in the correct order.
-   Import this single file in layout.tsx instead of individual files.
-================================ */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-/* ================================
-   1. Base - Foundation
-================================ */
-@import '../styles/base/reset.css';
-@import '../styles/base/variables.css';
-@import '../styles/base/typography.css';
-@import '../styles/base/layout-base.css';
+/* -----------------------------------------
+   カラーテーマ
+----------------------------------------- */
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --headerBackground: rgba(2 6 23 / 0.8);
+  --headerBorder: rgba(31 41 55);
+}
 
-/* ================================
-   2. Layout - Structure
-================================ */
-@import '../styles/layout/page-wrapper.css';
-/*
-@import '../styles/layout/header.css';
-@import '../styles/layout/navbar.css';
-@import '../styles/layout/footer.css';
-*/
-/* ================================
-   3. Components - Reusable UI
-================================ */
-/*
-@import '../styles/components/starry-background.css';
-*/
-@import '../styles/components/buttons.css';
-@import '../styles/components/cards.css';
-@import '../styles/components/icons.css';
+/* -----------------------------------------
+   全体スタイル
+----------------------------------------- */
+/* 魔法の62.5％(16px = 1.6rem) */
+html {
+  font-size: 62.5%;
+}
 
-/* ================================
-   4. Sections - Page Sections(moduleインポート)
-================================ */
-/*
-@import '../styles/sections/home.css';
-@import '../styles/sections/services.css';
-@import '../styles/sections/about.css';
-@import '../styles/sections/blog.css';
-@import '../styles/sections/contact.css';
-*/
-/* ================================
-   5. Utilities - Special Purpose(emergency-noticeはmoduleインポート)
-================================ */
-@import '../styles/utilities/emergency-notice.css';
+body {
+  margin: 0;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  font-size: 1.6rem;
+}
+html,
+body {
+  min-width: 368px;
+  min-height: 480px;
+}
+
+.page-wrapper, .footer-wrapper {
+  background-color: var(--headerBackground);
+}
+
+/* -----------------------------------------
+   page.tsx
+----------------------------------------- */
+@media (min-width: 960px) {
+  .logo-item {
+    margin-left: 15vw;
+  }
+}
+@media (max-width: 959px) {
+  .logo-item {
+    margin: 0 auto;
+  }
+}
+.page-wrapper {
+  position: relative;
+  width: 100vw;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: black;
+  color: #ffffff;
+}
+
+.sections-wrapper {
+padding-top: 4vh
+}
+
+/* PC: 固定高さ */
+@media (min-width: 960px) {
+  .main-container {
+    height: calc(100vh - 140px);
+    overflow: hidden;
+  }
+}
+
+/* スマホ・タブレット: スクロール可能 */
+@media (max-width: 959px) {
+  .main-container {
+    flex: 1;
+    overflow-y: auto; 
+    overflow-x: hidden;
+    min-height: calc(100vh - 140px);
+    padding-bottom: 60px;
+  }
+}
+
+.header-border {
+  border-bottom: 1px solid var(--headerBorder);
+  backdrop-filter: blur(10px);
+  padding: 16px 0;
+}
+@media (max-width: 959px) {
+  .header-container {
+    justify-content: center;
+  }
+}
+
+/* -----------------------------------------
+   星空スタイル
+----------------------------------------- */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR4AWNggAJQDwAB9QECxHVJkQAAAABJRU5ErkJggg==");
+  opacity: 0.06;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* 星空コンテナ */
+.starry-sky {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* 通常の星 */
+.star {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  opacity: 0;
+  animation:
+    twinkle 2s infinite ease-in-out alternate,
+    appear 12s infinite ease-in-out;
+  transform: translateZ(0);
+}
+
+/* キラキラ */
+@keyframes twinkle {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 1; }
+}
+
+/* ゆらぎ */
+@keyframes appear {
+  0% { opacity: 0; }
+  30% { opacity: 0.6; }
+  70% { opacity: 0.9; }
+  100% { opacity: 0; }
+}
+
+/* 流れ星 */
+.shooting-star {
+  position: absolute;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    rgba(255,255,255,1) 0%,
+    rgba(255,255,255,0.9) 40%,
+    rgba(255,255,255,0.4) 70%,
+    rgba(255,255,255,0) 100%
+  );
+  border-radius: 1px;
+  opacity: 0;
+  transform-origin: left center;
+  transition: transform 0.3s linear, opacity 0.25s ease-in-out;
+  will-change: transform, opacity;
+  pointer-events: none;
+}
