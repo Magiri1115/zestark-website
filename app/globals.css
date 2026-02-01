@@ -18,13 +18,12 @@
 /* 魔法の62.5％(16px = 1.6rem) */
 html {
   font-size: 62.5%;
-  margin: 0;
-  padding: 0;
-  border: 0;
 }
 
 body {
   margin: 0;
+  padding: 0;
+  border: 0;
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
   font-size: 1.6rem;
 }
