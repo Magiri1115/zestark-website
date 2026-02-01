@@ -1,36 +1,17 @@
 /* ------------------------------
    footer.tsx
 ------------------------------ */
-
-@media (min-width: 960px) {
-  .footer-wrapper {
-    position: absolute;
-    min-height: 1vh;
-    bottom: 0;
-    left: 0;
-    z-index: 50;
-    width: 100%;
-    text-align: center;
-    color: #ddd;
-    background-color: rgba(0, 0, 0, 0.4);
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-  }
-}
-
-@media (max-width: 959px) {
-  .footer-wrapper {
-    position: relative;
-    min-height: 1vh;
-    bottom: auto;
-    left: 0;
-    z-index: 50;
-    width: 100%;
-    text-align: center;
-    color: #ddd;
-    background-color: rgba(0, 0, 0, 0.4);
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    margin-top: auto;
-  }
+.footer-wrapper {
+  position: absolute;
+  min-height: 1vh;
+  bottom: 0;
+  left: 0;
+  z-index: 50;
+  width: 100%;
+  text-align: center;
+  color: #ddd;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .footer-inner {
