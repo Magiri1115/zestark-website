@@ -18,6 +18,9 @@
 /* 魔法の62.5％(16px = 1.6rem) */
 html {
   font-size: 62.5%;
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
 
 body {
@@ -28,7 +31,7 @@ body {
 html,
 body {
   min-width: 368px;
-  min-height: 480px;
+  min-height: 480px;  
 }
 
 .page-wrapper, .footer-wrapper {
