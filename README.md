@@ -246,3 +246,7 @@ npm run dev
 ## README
 - README.md：概要・セットアップ
 - README_shousai.md：設計思想・仕様詳細
+
+## styles
+これ以上の責務分離非推奨
+⇒どのプログラムにどんな影響が出るのか未知数
