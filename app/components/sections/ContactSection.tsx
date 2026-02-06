@@ -1,4 +1,4 @@
-import SnsIconList from "@/components/ui/SnsIconList";
+import SnsIconList from "../../components/ui/SnsIconList";
 
 export default function ContactSection() {
   return (

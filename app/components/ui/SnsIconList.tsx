@@ -1,4 +1,4 @@
-import { snsLinks } from "@/app/data/sns-links";
+import { snsLinks } from "../../data/sns-links";
 import SnsIconLink from "./SnsIconLink";
 
 export default function SnsIconList() {

@@ -1,4 +1,4 @@
-import BlogCard from "@/components/ui/BlogCard";
+import BlogCard from "../../components/ui/BlogCard";
 import { blogItems } from "@/app/data/blog";
 
 export default function BlogSection() {
