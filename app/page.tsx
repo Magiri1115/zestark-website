@@ -8,7 +8,7 @@ import Image from 'next/image';
 import StarryBackground from './components/background/StarryBackground';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
-import Header from './components/layout/header';
+import Header from './components/layout/Header';
 {/* ----------------------------- */}
 {/* Sections */}
 {/* ----------------------------- */}

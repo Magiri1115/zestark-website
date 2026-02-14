@@ -15,7 +15,7 @@ export default function Header({ onChangeSection }: HeaderProps) {
           <div className="contents-star">
             <Image
               className="fixed-small"
-              src="/zestark-star.svg"
+              src="app/public/images/zestark-star.svg"
               alt="Zestark Star Logo"
               width={90}
               height={75}
@@ -24,7 +24,7 @@ export default function Header({ onChangeSection }: HeaderProps) {
           </div>
           <div className="contents-logo">
             <Image
-              src="/zestark-logo.svg"
+              src="app/public/imageszestark-logo.svg"
               alt="Zestark Logo"
               width={120}
               height={100}
