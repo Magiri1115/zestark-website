@@ -1,5 +1,5 @@
 import { SnsLink } from "@/app/data/sns-links";
-import styles from "./sns-icon.module.css";
+import styles from "./sns-icon-link.module.css";
 
 type Props = {
   item: SnsLink;
