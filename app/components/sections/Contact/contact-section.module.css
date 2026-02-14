@@ -1,0 +1,25 @@
+/* ================================
+   Contact Section
+================================ */
+.container {
+  margin: 3rem 0;
+  text-align: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 1rem;
+}
+
+.info {
+  margin: 2rem 0;
+}
+
+.snsArea {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+}

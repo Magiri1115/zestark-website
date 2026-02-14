@@ -1,0 +1,44 @@
+/* ================================
+   Services Section
+================================ */
+.container {
+  text-align: center;
+}
+
+.cardContainer {
+  margin: 3rem 2rem;
+}
+
+/* ================================
+   Responsive Control
+================================ */
+.pcOnly {
+  display: grid;
+  margin: 1rem 2rem;
+  gap: 3rem;
+}
+
+.spOnly {
+  display: none;
+}
+
+@media (max-width: 959px) {
+  .pcOnly {
+    display: none;
+  }
+
+  .spOnly {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* ================================
+   Swipe Wrapper (SP用)
+================================ */
+.swipeWrapper {
+  width: 100%;
+  max-width: 360px;
+  margin: 0 auto;
+}

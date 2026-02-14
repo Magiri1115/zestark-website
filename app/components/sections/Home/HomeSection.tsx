@@ -1,4 +1,4 @@
-import PCNotice from "@/components/emergency/EmergencyNotice";
+import styles from "./home-section.module.css";
 
 type HomeSectionProps = {
   onChangeSection: (section: string) => void;
@@ -7,7 +7,7 @@ type HomeSectionProps = {
 export default function HomeSection({ onChangeSection }: HomeSectionProps) {
   return (
     <section id="home-section">
-      <div className="home-section-container">
+      <div className={styles.container}>
         <div>
           <div className="w-full flex flex-col items-center justify-center text-center px-4">
             <h2>MISSION</h2>
@@ -16,15 +16,14 @@ export default function HomeSection({ onChangeSection }: HomeSectionProps) {
               あなたの事業が100年続くためのシステムの土台をつくります。
             </p>
 
-            <div className="button-container flex items-center justify-center gap-6">
+            <div className={`${styles.buttonContainer} flex items-center justify-center gap-6`}>
               <button
-                className="home-button primary"
+                className={`${styles.button} ${styles.primary}`}
                 onClick={() => onChangeSection('services')}
               >
                 サービスを見る
               </button>
             </div>
-
           </div>
         </div>
       </div>

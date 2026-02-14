@@ -1,8 +1,9 @@
 'use client';
 
-import ServiceCard from '../ui/ServicesCard/ServicesCard';
-import SwipeContainer from '../interaction/SwipeContainer';
+import ServiceCard from '@/app/components/ui/ServicesCard/ServicesCard';
+import SwipeContainer from '@/app/components/interaction/SwipeContainer';
 import { ServiceItem, services } from '@/app/data/services';
+import styles from './services-section.module.css';
 
 type Props = {
   onChangeSection: (section: string) => void;
@@ -37,7 +38,7 @@ export default function ServicesSection({ onChangeSection }: Props) {
 
 function ServicesHeader() {
   return (
-    <div className="services-container">
+    <div className={styles.container}>
       <h2>SERVICES</h2>
       <p>私たちが提供する３つの事業領域</p>
     </div>
@@ -52,7 +53,7 @@ function PcServices({
   onClick: () => void;
 }) {
   return (
-    <div className="pc-only grid grid-cols-3 gap-8">
+    <div className={`${styles.pcOnly} grid-cols-3`}>
       {services.map((service) => (
         <ServiceCard
           key={service.id}
@@ -73,16 +74,15 @@ function SpServices({
   onClick: () => void;
 }) {
   return (
-    <div className="sp-only">
+    <div className={styles.spOnly}>
       <SwipeContainer length={services.length}>
         {(index) => (
-          <div className="sp-service-wrapper">
+          <div className={styles.swipeWrapper}>
             <ServiceCard
               {...services[index]}
               button={CTA_LABEL}
               onClick={onClick}
             />
-            <p className="swipe-telop">← 左右にフリック →</p>
           </div>
         )}
       </SwipeContainer>
