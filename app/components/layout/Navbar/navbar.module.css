@@ -1,44 +1,49 @@
-/* ==============================
+/* ================================
    Navbar Base（全端末共通）
 ================================ */
-.navbar-divst {
+
+.navbar {
   display: flex;
   gap: 2rem;
 }
 
-/* ==============================
+/* ================================
    Nav Item / Link
 ================================ */
-.nav-item {
+
+.navItem {
   position: relative;
 }
 
-.nav-link {
+.navLink {
   background: none;
   border: none;
   padding: 0;
   cursor: pointer;
   pointer-events: auto;
-
   color: rgba(255, 255, 255, 0.7);
   font-weight: 500;
   letter-spacing: 0em;
 }
 
-.nav-link:hover {
+.navLink:hover {
   color: rgba(255, 255, 255, 0.95);
 }
 
+/* ================================
+   Desktop (PC)
+================================ */
+
 @media (min-width: 960px) {
-  .navi-wrapper {
+  .naviWrapper {
     margin-right: 5vw;
   }
 
-  .mobile-menu-button {
+  .mobileMenuButton {
     display: none;
   }
 
-  .navbar-divst {
+  .navbarDiv {
     flex-direction: row;
     opacity: 1;
     pointer-events: auto;
@@ -50,17 +55,21 @@
   }
 }
 
+/* ================================
+   Mobile / Tablet
+================================ */
+
 @media (max-width: 959px) {
-  .header-left {
+  .headerLeft {
     display: flex;
     align-items: center;
   }
 
-  .navi-wrapper {
+  .naviWrapper {
     display: block;
   }
 
-  .mobile-menu-button {
+  .mobileMenuButton {
     position: relative;
     top: 24px;
     left: 5vw;
@@ -78,7 +87,7 @@
     left: 0;
   }
 
-  .navbar-divst {
+  .navbarDiv {
     flex-direction: column;
     margin: 28px 0 0 5vw;
     gap: 1rem;
@@ -93,17 +102,18 @@
     pointer-events: none;
   }
 
-  .navbar-divst.is-open {
+  .navbarDiv.isOpen {
     opacity: 1;
     pointer-events: auto;
     transform: translateY(0);
   }
 }
 
-/* ==============================
+/* ================================
    Blink Animation
 ================================ */
-@keyframes gentle-blink {
+
+@keyframes gentleBlink {
   0% {
     opacity: 0.25;
   }
@@ -115,20 +125,22 @@
   }
 }
 
-/* ==============================
+/* ================================
    Active Section（点灯）
 ================================ */
-.nav-item.is-active {
+
+.navItem.isActive {
   opacity: 0.55;
   transform: scaleX(1);
   animation: none;
 }
 
-/* ==============================
+/* ================================
    Hover on Inactive Section（点滅）
 ================================ */
-.nav-item:not(.is-active):hover {
+
+.navItem:not(.isActive):hover {
   opacity: 0.4;
   transform: scaleX(1);
-  animation: gentle-blink 2.2s ease-in-out infinite;
+  animation: gentleBlink 2.2s ease-in-out infinite;
 }

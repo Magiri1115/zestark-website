@@ -1,26 +1,26 @@
 'use client';
 
 import React, { useState } from 'react';
-import Image from 'next/image';
 {/* ----------------------------- */}
 {/* Layout */}
 {/* ----------------------------- */}
-import StarryBackground from './components/background/StarryBackground';
-import Navbar from './components/layout/Navbar';
-import Footer from './components/layout/Footer';
-import Header from './components/layout/Header';
+import StarryBackground from '../app/components/background/StarryBackground';
+import Navbar from '../app/components/layout/Navbar/Navbar';
+import Footer from '../app/components/layout/Footer/Footer';
+import Header from '../app/components/layout/Header/Header';
 {/* ----------------------------- */}
 {/* Sections */}
 {/* ----------------------------- */}
-import HomeSection from './components/sections/Home/HomeSection';
-import ServicesSection from './components/sections/Services/ServicesSection';
-import AboutSection from './components/sections/About/AboutSection';
-import BlogSection from './components/sections/Blog/BlogSection';
-import ContactSection from './components/sections/Contact/ContactSection';
-import EmergencyNotice from './components/emergency/EmergencyNotice';
+import HomeSection from '@/app/components/sections/Home/HomeSection';
+import ServicesSection from '../app/components/sections/Services/ServicesSection';
+import AboutSection from '../app/components/sections/About/AboutSection';
+import BlogSection from '../app/components/sections/Blog/BlogSection';
+import ContactSection from '../app/components/sections/Contact/ContactSection';
+import EmergencyNotice from '../app/components/emergency/EmergencyNotice';
 
 export default function Page() {
   const [currentSection, setCurrentSection] = useState('home');
+  
   const renderSection = () => {
     switch (currentSection) {
       case 'home':
@@ -37,10 +37,6 @@ export default function Page() {
         return <HomeSection onChangeSection={setCurrentSection} />;
     }
   };
-
-  const maintenancePC = process.env.NEXT_PUBLIC_MAINTENANCE_PC === "true";
-  const maintenanceTablet = process.env.NEXT_PUBLIC_MAINTENANCE_TABLET === "true";
-  const maintenanceMobile = process.env.NEXT_PUBLIC_MAINTENANCE_MOBILE === "true";
 
   return (
     <div className="min-w-[368px] min-h-[480px]">

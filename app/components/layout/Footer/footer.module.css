@@ -1,0 +1,62 @@
+/* ================================
+   Footer
+================================ */
+
+@media (min-width: 960px) {
+  .wrapper {
+    position: absolute;
+    min-height: 1vh;
+    bottom: 0;
+    left: 0;
+    z-index: 50;
+    width: 100%;
+    text-align: center;
+    color: #ddd;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
+
+@media (max-width: 959px) {
+  .wrapper {
+    position: relative;
+    min-height: 1vh;
+    bottom: auto;
+    left: 0;
+    z-index: 50;
+    width: 100%;
+    text-align: center;
+    color: #ddd;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: auto;
+  }
+}
+
+.inner {
+  display: flex;
+  justify-content: center;
+  padding: 4px 4vw;
+}
+
+.copy {
+  font-size: clamp(12px, 2vw, 14px);
+  line-height: 24px;
+  opacity: 0.8;
+}
+
+.nav {
+  display: none;
+}
+
+.nav a {
+  font-size: 14px;
+  color: #aaa;
+  text-decoration: none;
+  transition: opacity 0.2s ease, color 0.2s ease;
+}
+
+.nav a:hover {
+  color: white;
+  opacity: 1;
+}

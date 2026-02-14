@@ -1,7 +1,7 @@
 "use client";
 
-import "./emergency-notice.module.css";
-import { useDevice } from "../../hook/useDevice";
+import styles from "./emergency-notice.module.css";
+import { useDevice } from "@/app/hook/useDevice";
 
 type Props = {
   maintenancePC: boolean;
@@ -25,8 +25,8 @@ export default function EmergencyNotice({
   if (!shouldShow) return null;
 
   return (
-    <div className="emergency-overlay">
-      <aside className="emergency-notice">
+    <div className={styles.overlay}>
+      <aside className={styles.notice}>
         {device === "pc" && <p>現在、PC向けサイトを一時停止しています。</p>}
         {device === "tablet" && <p>現在、タブレット向け表示を一時停止しています。</p>}
         {device === "mobile" && <p>現在、スマートフォン向け表示を停止しています。</p>}
