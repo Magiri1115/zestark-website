@@ -1,0 +1,9 @@
+/* ================================
+   SNS Icon List Container
+================================ */
+.container {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+}
