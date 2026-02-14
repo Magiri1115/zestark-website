@@ -11,7 +11,7 @@ import "./styles/navbar.css";
 import "./styles/footer.css";
 import "./styles/header.css";
 
-import ShinobiTracker from "./components/ShinobiTracker";
+import ShinobiTracker from "./lib/ShinobiTracker";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
