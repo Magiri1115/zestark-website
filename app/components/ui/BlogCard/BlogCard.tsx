@@ -1,18 +1,19 @@
-import { BlogItem } from "../../data/blog";
+import { BlogItem } from "@/app/data/blog";
+import styles from "./blog-card.module.css";
 
 type Props = {
   item: BlogItem;
 };
 
 export default function BlogCard({ item }: Props) {
-  const disabledClass = item.disabled ? "blog-card--disabled" : "";
+  const cardClass = `${styles.card} ${item.disabled ? styles.disabled : ''}`;
 
   return (
     <a
       href={item.url}
       target="_blank"
       rel="noopener noreferrer"
-      className={`blog-card ${disabledClass}`}
+      className={cardClass}
     >
       <h3>{item.title}</h3>
       <p>{item.description}</p>

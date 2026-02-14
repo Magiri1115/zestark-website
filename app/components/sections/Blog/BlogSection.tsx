@@ -1,5 +1,6 @@
-import BlogCard from "../../components/ui/BlogCard";
+import BlogCard from "@/app/components/ui/BlogCard/BlogCard";
 import { blogItems } from "@/app/data/blog";
+import styles from "./blog-section.module.css";
 
 export default function BlogSection() {
   return (
@@ -8,7 +9,7 @@ export default function BlogSection() {
         <h2>BLOG</h2>
         <p>最新の活動報告 (外部サイトに移動します)</p>
 
-        <div className="blog-items">
+        <div className={styles.blogItems}>
           {blogItems.map((item, index) => (
             <BlogCard key={index} item={item} />
           ))}

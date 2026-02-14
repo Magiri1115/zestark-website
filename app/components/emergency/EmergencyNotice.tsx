@@ -1,6 +1,6 @@
 "use client";
 
-import "../../styles/utilities/emergency-notice.module.css";
+import "./emergency-notice.module.css";
 import { useDevice } from "../../hook/useDevice";
 
 type Props = {

@@ -12,10 +12,10 @@ import Header from './components/layout/Header';
 {/* ----------------------------- */}
 {/* Sections */}
 {/* ----------------------------- */}
-import HomeSection from './components/sections/HomeSection';
+import HomeSection from './components/sections/Home/HomeSection';
 import ServicesSection from './components/sections/ServicesSection';
-import AboutSection from './components/sections/AboutSection';
-import BlogSection from './components/sections/BlogSection';
+import AboutSection from './components/sections/About/AboutSection';
+import BlogSection from './components/sections/Blog/BlogSection';
 import ContactSection from './components/sections/ContactSection';
 import EmergencyNotice from './components/emergency/EmergencyNotice';
 

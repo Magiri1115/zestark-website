@@ -1,0 +1,27 @@
+/* ================================
+   Blog Card
+================================ */
+.card {
+  display: block;
+  padding: 1.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.4;
+  border-color: rgba(255, 255, 255, 0.08);
+  cursor: default;
+}
+
+.disabled span {
+  opacity: 0.6;
+}
