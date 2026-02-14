@@ -1,6 +1,6 @@
 'use client';
 
-import ServiceCard from '../ui/ServicesCard';
+import ServiceCard from '../ui/ServicesCard/ServicesCard';
 import SwipeContainer from '../interaction/SwipeContainer';
 import { ServiceItem, services } from '@/app/data/services';
 
